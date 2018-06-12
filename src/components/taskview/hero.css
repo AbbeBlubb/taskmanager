@@ -1,5 +1,6 @@
 .hero {
   height: 250px;
+  padding: 25px 10px;
 }
 
 .hero > .container {
