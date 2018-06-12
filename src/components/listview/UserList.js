@@ -1,25 +1,25 @@
 import React from "react"
-import Task from "./Task"
+import User from "./User"
 
-export default class List extends React.Component {
+export default class UserList extends React.Component {
 
   constructor(props) {
     super(props)
     this.state = {
-      taskList: [],
+      users: [],
       informationIsDownloaded: false
     }
   }
 
   componentDidMount() {
-    fetch("https://jsonplaceholder.typicode.com/todos").then(response => (
+    fetch("https://jsonplaceholder.typicode.com/users").then(response => (
       response.json()
     )).then(json => {
       this.setState({
-        taskList: json,
+        users: json,
         informationIsDownloaded: true
       })
-      console.log(this.state.taskList)
+      console.log(this.state.users)
     })
   }
 
@@ -33,7 +33,15 @@ export default class List extends React.Component {
     } else {
       return (
         <section className="list">
-          Task
+          {this.state.users.map(user => (
+            <User
+              key={user.id}
+              id={user.id}
+              nick={user.username}
+              name={user.name}
+              email={user.email}
+              city={user.address.city} />
+          ))}
         </section>
       )
     }
