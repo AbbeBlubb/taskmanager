@@ -40,7 +40,7 @@ export default class List extends React.Component {
               nick={user.username}
               name={user.name}
               email={user.email}
-              city={user.address.city}/>
+              city={user.address.city} />
           ))}
         </section>
       )

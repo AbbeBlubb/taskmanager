@@ -4,7 +4,6 @@ import Header from "./listview/Header"
 import Filter from "./listview/Filter"
 import List from "./listview/List"
 import TaskView from "./taskview/TaskView"
-import User from "./listview/User"
 
 export default class App extends React.Component {
 
@@ -16,7 +15,6 @@ export default class App extends React.Component {
           <Route exact path="/" component={Filter} />
           <Route exact path="/" component={List} />
           <Route exact path="/user/:id" component={TaskView} />
-          <User />
         </div>
       </HashRouter>
     )
