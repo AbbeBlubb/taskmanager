@@ -8,7 +8,13 @@ export default class User extends React.Component {
 
   render() {
     return (
-      <Link to={`/user/${this.props.id}`}>
+      <Link to={{
+        pathname: `/user/${this.props.id}`,
+        state: {
+          name: this.props.name,
+          nick: this.props.nick
+        }
+      }}>
         <div className="user">
           <div className="container borderbox">
 
