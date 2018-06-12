@@ -1,4 +1,5 @@
 import React from "react"
+import User from "./User"
 
 export default class List extends React.Component {
 
@@ -33,6 +34,10 @@ export default class List extends React.Component {
       return (
         <section className="list">
           Mappa ut filtrerad array
+          {this.state.users.map(user => (
+            <User
+              name={user.name} />
+          ))}
         </section>
       )
     }

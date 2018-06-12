@@ -20,7 +20,7 @@ export default class User extends React.Component {
               <div className="second">
                 <div>
                   <div className="name">
-                    Namn
+                    {this.props.name}
                   </div>
                 </div>
                 <div className="email">
