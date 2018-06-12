@@ -1,0 +1,63 @@
+.user {
+  height: 110px;
+  padding: 0 12px;
+}
+
+.user .container {
+  height: 110px;
+  padding: 15px 0 13px 0;
+  border-bottom: 0.5px solid #0e48b6;
+  display: flex;
+  justify-content: space-between;
+}
+
+.user .firsthalf,
+.user .secondhalf {
+  display: flex;
+}
+
+.user .first {
+  width: 70px;
+}
+
+.user .second {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.user .name {
+  font-size: 20px;
+}
+
+.user .email,
+.user .city {
+  color: #656565;
+}
+
+.user .third {
+  text-align: right;
+}
+
+.user .third > div:nth-child(1) {
+  font-size: 15px;
+  margin-top: 8px;
+}
+
+.user .third > div:nth-child(2) {
+  font-size: 13px;
+  color: #656565;
+}
+
+.user .fourth {
+  margin: auto 0 auto 30px;
+}
+
+.user .fourth > div {
+  height: 20px;
+}
+
+.user .fourth > div > img {
+  height: 100%;
+}
