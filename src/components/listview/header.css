@@ -1,0 +1,29 @@
+.listheader {
+  height: 40px;
+  font-size: 22px;
+  border-bottom: 0.5px solid #0e48b6;
+  padding: 5px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.listheader .user {
+  height: 30px;
+}
+
+.listheader .user > img {
+  height: 100%;
+}
+
+.listheader .title {
+  margin-bottom: 5px;
+}
+
+.listheader .settings {
+  height: 30px;
+}
+
+.listheader .settings > img {
+  height: 100%;
+}
