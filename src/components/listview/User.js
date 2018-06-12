@@ -17,24 +17,24 @@ export default class User extends React.Component {
                 <div className="userimage">
                   <img src={user} alt="User" />
                 </div>
-                <div className="small gray">
+                <div className="nick tiny gray">
                   {this.props.nick}
                 </div>
-                <div className="small gray">
+                <div className="tiny gray">
                   Id: {this.props.id}
                 </div>
               </div>
 
               <div className="second">
                 <div>
-                  <div className="name large">
+                  <div className="large">
                     {this.props.name}
                   </div>
                 </div>
-                <div className="email gray">
+                <div className="email small gray">
                   {this.props.email}
                 </div>
-                <div className="city gray">
+                <div className="city small gray">
                   <div>
                     {this.props.city}
                   </div>
@@ -47,7 +47,7 @@ export default class User extends React.Component {
                 <div className="medium">
                   5
                 </div>
-                <div className="small gray">
+                <div className="tiny gray">
                   Saker att göra
                 </div>
               </div>

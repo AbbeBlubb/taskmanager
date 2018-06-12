@@ -17,7 +17,17 @@
 }
 
 .user .first {
-  width: 70px;
+  width: 65px;
+  padding-right: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.user .nick {
+  max-width: 70px;
+  overflow-wrap: break-word;
 }
 
 .user .userimage {
@@ -35,12 +45,20 @@
   justify-content: space-between;
 }
 
+.user .email {
+  text-decoration: underline;
+}
+
 .user .third {
   text-align: right;
 }
 
 .user .third > div:nth-child(1) {
   margin-top: 8px;
+}
+
+.user .third > div:nth-child(2) {
+  width: 30px;
 }
 
 .user .fourth {
@@ -53,4 +71,34 @@
 
 .user .fourth > div > img {
   height: 100%;
+}
+
+@media (min-width: 400px) {
+  .user .nick,
+  .user .id {
+    font-size: 12px;
+  }
+
+  .user .third > div:nth-child(2) {
+    width: 40px;
+    font-size: 12px;
+  }
+
+  .user .email,
+  .user .city {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 600px) {
+  .user .first {
+    width: 115px;
+    padding-right: 15px;
+
+  }
+
+  .user .nick {
+    max-width: 115px;
+    overflow-wrap: break-word;
+  }
 }

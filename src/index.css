@@ -22,6 +22,10 @@ a:active {
   color: #656565;
 }
 
+.tiny {
+  font-size: 10px;
+}
+
 .small {
   font-size: 13px;
 }
