@@ -1,6 +1,8 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import "./user.css"
+import user from "../../media/user.png"
+import rightarrow from "../../media/right-arrow-1.png"
 
 export default class User extends React.Component {
 
@@ -12,23 +14,29 @@ export default class User extends React.Component {
 
             <div className="firsthalf">
               <div className="first">
-                <div>
-                  Nick
+                <div className="userimage">
+                  <img src={user} alt="User" />
+                </div>
+                <div className="small gray">
+                  {this.props.nick}
+                </div>
+                <div className="small gray">
+                  Id: {this.props.id}
                 </div>
               </div>
 
               <div className="second">
                 <div>
-                  <div className="name">
+                  <div className="name large">
                     {this.props.name}
                   </div>
                 </div>
-                <div className="email">
-                  E-post
+                <div className="email gray">
+                  {this.props.email}
                 </div>
-                <div className="city">
+                <div className="city gray">
                   <div>
-                    Stad
+                    {this.props.city}
                   </div>
                 </div>
               </div>
@@ -36,17 +44,17 @@ export default class User extends React.Component {
 
             <div className="secondhalf">
               <div className="third">
-                <div>
+                <div className="medium">
                   5
                 </div>
-                <div>
+                <div className="small gray">
                   Saker att göra
                 </div>
               </div>
 
               <div className="fourth">
-                <div>
-                  >
+                <div className="userimage">
+                  <img src={rightarrow} alt="Go to the user's tasklist" />
                 </div>
               </div>
             </div>

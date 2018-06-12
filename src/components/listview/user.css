@@ -20,6 +20,14 @@
   width: 70px;
 }
 
+.user .userimage {
+  height: 20px;
+}
+
+.user .userimage > img {
+  height: 100%;
+}
+
 .user .second {
   height: 100%;
   display: flex;
@@ -27,27 +35,12 @@
   justify-content: space-between;
 }
 
-.user .name {
-  font-size: 20px;
-}
-
-.user .email,
-.user .city {
-  color: #656565;
-}
-
 .user .third {
   text-align: right;
 }
 
 .user .third > div:nth-child(1) {
-  font-size: 15px;
   margin-top: 8px;
-}
-
-.user .third > div:nth-child(2) {
-  font-size: 13px;
-  color: #656565;
 }
 
 .user .fourth {

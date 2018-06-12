@@ -17,3 +17,19 @@ a:active {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+
+.gray {
+  color: #656565;
+}
+
+.small {
+  font-size: 13px;
+}
+
+.medium {
+  font-size: 15px;
+}
+
+.large {
+  font-size: 20px;
+}

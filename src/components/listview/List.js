@@ -33,10 +33,14 @@ export default class List extends React.Component {
     } else {
       return (
         <section className="list">
-          Mappa ut filtrerad array
           {this.state.users.map(user => (
             <User
-              name={user.name} />
+              key={user.id}
+              id={user.id}
+              nick={user.username}
+              name={user.name}
+              email={user.email}
+              city={user.address.city}/>
           ))}
         </section>
       )
