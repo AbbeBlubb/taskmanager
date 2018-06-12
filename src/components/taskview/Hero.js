@@ -15,7 +15,16 @@ export default class Hero extends React.Component {
           </div>
           <div className="userinfo">
             <div>
-              Namnet på personen
+              <div>
+                {this.props.name
+                  ? this.props.name
+                  : "Name"}
+              </div>
+              <div>
+                {this.props.nick
+                  ? this.props.nick
+                  : "Nick"}
+              </div>
             </div>
             <div>
               Antal saker kvar att göra
