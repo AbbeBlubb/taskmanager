@@ -1,0 +1,31 @@
+.hero {
+  height: 250px;
+}
+
+.hero > .container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: black;
+  color: white;
+}
+
+.hero .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+}
+
+.hero .back > img {
+  width: 100%;
+  height: 100%;
+}
+
+.hero .userinfo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+
