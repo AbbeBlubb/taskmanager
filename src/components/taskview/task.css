@@ -47,6 +47,10 @@
   align-items: center;
 }
 
+.task .tasktext:first-letter {
+  text-transform: capitalize;
+}
+
 .task .third {
   width: 60px;
   display: flex;

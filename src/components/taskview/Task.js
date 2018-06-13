@@ -14,12 +14,12 @@ export default class Task extends React.Component {
           <div className="firsthalf">
             <div className="first">
               <div className={this.props.completed ? "icon done" : "icon pending"}>
-                <img src={document} alt="Task" />
+                <img src={document} alt="Task: blue for pending, green for done" title="Task: blue for pending, green for done" />
               </div>
             </div>
 
             <div className="second">
-              <div className="medium">
+              <div className="tasktext medium">
                 {this.props.title}
               </div>
             </div>
@@ -30,7 +30,7 @@ export default class Task extends React.Component {
               ?
               <div className="third">
                 <div className="icon">
-                  <img src={checked} alt="The task is done" />
+                  <img src={checked} alt="This task is done" title="This task is done" />
                 </div>
                 <div className="tiny gray">
                   Done
@@ -39,7 +39,7 @@ export default class Task extends React.Component {
               :
               <div className="third">
                 <div className="icon">
-                  <img src={clock} alt="The task is done" />
+                  <img src={clock} alt="This task is pending" title="This task is pending" />
                 </div>
                 <div className="tiny gray">
                   Pending

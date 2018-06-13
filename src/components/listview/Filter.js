@@ -12,7 +12,7 @@ export default class Filter extends React.Component {
             <input className="inputfield medium" />
           </div>
           <div className="search">
-            <img src={loupe} alt="Search" />
+            <img src={loupe} alt="Search user information" title="Search user information" />
           </div>
         </div>
       </section>

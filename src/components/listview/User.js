@@ -15,7 +15,7 @@ export default class User extends React.Component {
             <div className="firsthalf">
               <div className="first">
                 <div className="userimage">
-                  <img src={user} alt="User" />
+                  <img src={user} alt="User icon" title="User icon" />
                 </div>
                 <div className="nick tiny gray">
                   {this.props.nick}
@@ -54,7 +54,7 @@ export default class User extends React.Component {
 
               <div className="fourth">
                 <div className="userimage">
-                  <img src={rightarrow} alt="Go to the user's tasklist" />
+                  <img src={rightarrow} alt="Go to the user's tasklist" title="Go to the user's tasklist" />
                 </div>
               </div>
             </div>

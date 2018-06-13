@@ -9,11 +9,11 @@ export default class Header extends React.Component {
     return (
       <header className="listheader">
         <div className="loggedinuser">
-          <img src={user} alt="You are logged in!" />
+          <img src={user} alt="You are logged in!" title="You are logged in!" />
         </div>
         <div className="title">Task Manager</div>
         <div className="settings">
-          <img src={edit} alt="Create your own task" />
+          <img src={edit} alt="Create your own task" title="Create your own task" />
         </div>
       </header>
     )

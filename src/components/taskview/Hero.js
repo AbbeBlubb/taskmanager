@@ -64,7 +64,7 @@ export default class Hero extends React.Component {
           <div className="container">
             <div className="back">
               <Link to="/">
-                <img src={leftarrow} alt="Back" />
+                <img src={leftarrow} alt="Back to the list with users" title="Back to the list with users" />
               </Link>
             </div>
             <div className="loading large">
@@ -79,7 +79,7 @@ export default class Hero extends React.Component {
           <div className="container">
             <div className="back">
               <Link to="/">
-                <img src={leftarrow} alt="Back" />
+                <img src={leftarrow} alt="Back to the list with users" title="Back to the list with users" />
               </Link>
             </div>
             <div className="userinfo">
