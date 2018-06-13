@@ -26,13 +26,13 @@ export default class UserList extends React.Component {
   render() {
     if (!this.state.informationIsDownloaded) {
       return (
-        <div>
+        <section className="userlist">
           Loading...
-        </div>
+        </section>
       )
     } else {
       return (
-        <section className="list">
+        <section className="userlist">
           {this.state.users.map(user => (
             <User
               key={user.id}

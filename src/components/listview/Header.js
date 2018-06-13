@@ -8,7 +8,7 @@ export default class Header extends React.Component {
   render() {
     return (
       <header className="listheader">
-        <div className="user">
+        <div className="loggedinuser">
           <img src={user} alt="You are logged in!" />
         </div>
         <div className="title">Task Manager</div>

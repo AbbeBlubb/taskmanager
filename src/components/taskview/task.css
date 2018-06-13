@@ -1,6 +1,8 @@
 .task {
   height: 110px;
   padding: 0 12px;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .task .container {

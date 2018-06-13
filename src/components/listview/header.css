@@ -8,11 +8,11 @@
   align-items: center;
 }
 
-.listheader .user {
+.listheader .loggedinuser {
   height: 30px;
 }
 
-.listheader .user > img {
+.listheader .loggedinuser > img {
   height: 100%;
 }
 
