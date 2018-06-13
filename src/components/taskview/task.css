@@ -32,11 +32,11 @@
 }
 
 .task .done {
-  background-color: rgba(83, 255, 29, 0.31);
+  background-color: rgba(83, 255, 29, 0.15);
 }
 
 .task .pending {
-  background-color: rgba(0, 0, 255, 0.24);
+  background-color: rgba(0, 0, 255, 0.15);
 }
 
 .task .second {
@@ -51,6 +51,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.task .third div:nth-child(2) {
+  margin-top: 5px;
 }
 
 @media (min-width: 400px) {
