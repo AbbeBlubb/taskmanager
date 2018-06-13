@@ -84,7 +84,7 @@ export default class Hero extends React.Component {
             </div>
             <div className="userinfo">
               <div>
-                <div className="large">
+                <div className="name">
                   {this.state.user.name}
                 </div>
                 <div className="medium">

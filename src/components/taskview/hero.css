@@ -35,6 +35,10 @@
   left: 0;
 }
 
+.hero .name {
+  font-size: 24px;
+}
+
 .hero .loading {
   -webkit-box-sizing: unset;
   -moz-box-sizing: unset;

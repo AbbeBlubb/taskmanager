@@ -64,9 +64,13 @@
 }
 
 @media (min-width: 400px) {
-
+  .task .tasktext {
+    font-size: 15px;
+  }
 }
 
 @media (min-width: 600px) {
-
+  .task .tasktext {
+    font-size: 17px;
+  }
 }

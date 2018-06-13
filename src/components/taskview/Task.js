@@ -19,7 +19,7 @@ export default class Task extends React.Component {
             </div>
 
             <div className="second">
-              <div className="tasktext medium">
+              <div className="tasktext small">
                 {this.props.title}
               </div>
             </div>
