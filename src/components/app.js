@@ -7,6 +7,17 @@ import TaskView from "./taskview/TaskView"
 
 export default class App extends React.Component {
 
+  constructor(props) {
+    super(props)
+    this.state = {
+      nrOfPendingTasks: null
+    }
+  }
+
+  nrOfPendingTasks = nr => {
+    this.setState({ nrOfPendingTasks: nr })
+  }
+
   render() {
     return (
       <HashRouter>
