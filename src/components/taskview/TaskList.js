@@ -19,11 +19,13 @@ export default class TaskList extends React.Component {
         taskList: json,
         informationIsDownloaded: true
       })
-      console.log(this.state.taskList)
     })
   }
 
   render() {
+    const filteredArray = this.state.taskList.filter(element =>
+      element.userId === Number(this.props.userId))
+
     if (!this.state.informationIsDownloaded) {
       return (
         <div>
@@ -33,7 +35,7 @@ export default class TaskList extends React.Component {
     } else {
       return (
         <section className="list">
-          {this.state.taskList.map(element => (
+          {filteredArray.map(element => (
             <Task
               key={element.id}
               id={element.id} />
