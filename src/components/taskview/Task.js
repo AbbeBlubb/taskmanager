@@ -1,5 +1,8 @@
 import React from "react"
 import "./task.css"
+import document from "../../media/document.png"
+import checked from "../../media/checked.png"
+import clock from "../../media/clock.png"
 
 export default class Task extends React.Component {
 
@@ -11,7 +14,7 @@ export default class Task extends React.Component {
           <div className="firsthalf">
             <div className="first">
               <div className="icon">
-                Ikon
+                <img src={document} alt="Task" />
               </div>
             </div>
 
@@ -23,14 +26,30 @@ export default class Task extends React.Component {
           </div>
 
           <div className="secondhalf">
-            <div className="third">
-              <div className="icon">
-                Ikon
+
+
+          {this.props.completed
+            ? <div className="third">
+                <div className="icon">
+                  <img src={checked} alt="The task is done" />
+                </div>
+                <div className="tiny gray">
+                  Done
+                </div>
               </div>
-              <div className="tiny gray">
-                Klar / ej klar
+            : <div className="third">
+                <div className="icon">
+                  <img src={clock} alt="The task is done" />
+                </div>
+                <div className="tiny gray">
+                  Pending
+                </div>
               </div>
-            </div>
+          }
+
+
+
+
           </div>
 
         </div>
