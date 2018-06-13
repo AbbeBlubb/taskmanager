@@ -31,6 +31,14 @@
   height: 100%;
 }
 
+.task .done {
+  background-color: rgba(83, 255, 29, 0.31);
+}
+
+.task .pending {
+  background-color: rgba(0, 0, 255, 0.24);
+}
+
 .task .second {
 
   display: flex;
