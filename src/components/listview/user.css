@@ -6,7 +6,7 @@
 .user .container {
   height: 110px;
   padding: 15px 0 13px 0;
-  border-bottom: 0.5px solid #0e48b6;
+  border-bottom: 0.5px solid rgba(14, 72, 182, 0.30);
   display: flex;
   justify-content: space-between;
 }
@@ -51,18 +51,20 @@
 
 .user .third {
   text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .user .third > div:nth-child(1) {
-  margin-top: 8px;
 }
 
 .user .third > div:nth-child(2) {
-  width: 30px;
+  width: 45px;
 }
 
 .user .fourth {
-  margin: auto 0 auto 30px;
+  margin: auto 0 auto 15px;
 }
 
 .user .fourth > div {
@@ -80,13 +82,17 @@
   }
 
   .user .third > div:nth-child(2) {
-    width: 40px;
+    width: 50px;
     font-size: 12px;
   }
 
   .user .email,
   .user .city {
     font-size: 15px;
+  }
+
+  .user .fourth {
+    margin: auto 0 auto 30px;
   }
 }
 
@@ -100,5 +106,9 @@
   .user .nick {
     max-width: 115px;
     overflow-wrap: break-word;
+  }
+
+  .user .fourth {
+    margin: auto 0 auto 50px;
   }
 }

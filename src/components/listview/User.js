@@ -48,7 +48,7 @@ export default class User extends React.Component {
                   5
                 </div>
                 <div className="tiny gray">
-                  Saker att göra
+                  pending tasks
                 </div>
               </div>
 

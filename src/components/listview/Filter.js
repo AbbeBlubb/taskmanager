@@ -9,7 +9,7 @@ export default class Filter extends React.Component {
       <section className="filter">
         <div className="container">
           <div>
-            Låda för sökning
+            <input className="inputfield medium" />
           </div>
           <div className="search">
             <img src={loupe} alt="Search" />

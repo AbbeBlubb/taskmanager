@@ -6,7 +6,7 @@
 .task .container {
   height: 110px;
   padding: 15px 0 13px 0;
-  border-bottom: 0.5px solid #0e48b6;
+  border-bottom: 0.5px solid rgba(225, 159, 98, 0.51);
   display: flex;
   justify-content: space-between;
 }
