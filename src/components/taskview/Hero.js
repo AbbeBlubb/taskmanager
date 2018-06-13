@@ -9,9 +9,11 @@ export default class Hero extends React.Component {
     super(props)
     this.state = {
       users: [],
+      user: [],
       taskList: [],
-      userInfoIsDownloaded: false,
-      userTaskListIsDownloaded: false
+      pendingNr: null,
+      userInfoIsDone: false,
+      pendingNrIsDone: false
     }
   }
 
@@ -20,8 +22,7 @@ export default class Hero extends React.Component {
       response.json()
     )).then(json => {
       this.setState({
-        users: json,
-        informationIsDownloaded: true
+        users: json
       })
       this.getUser()
     })
@@ -30,8 +31,7 @@ export default class Hero extends React.Component {
       response.json()
     )).then(json => {
       this.setState({
-        taskList: json,
-        informationIsDownloaded: true
+        taskList: json
       })
       this.getPending()
     })
@@ -39,18 +39,26 @@ export default class Hero extends React.Component {
 
   getUser = () => {
     const user = this.state.users.find(element => element.id === Number(this.props.userId))
-    console.log(user)
+    this.setState({
+      user,
+      userInfoIsDone: true
+    })
+    console.log(this.state.user)
   }
 
   getPending = () => {
     const pending = this.state.taskList.filter(element =>
       element.userId === Number(this.props.userId) && !element.completed)
     const pendingNr = pending.length
-    console.log(pendingNr)
+    this.setState({
+      pendingNr,
+      pendingNrIsDone: true
+    })
+    console.log(this.state.pendingNr)
   }
 
   render() {
-    if (!this.state.informationIsDownloaded) {
+    if (!this.state.userInfoIsDone || !this.state.pendingNrIsDone) {
       return (
         <header className="hero">
           <div className="container">
@@ -77,17 +85,13 @@ export default class Hero extends React.Component {
             <div className="userinfo">
               <div>
                 <div className="large">
-                  {this.props.name
-                    ? this.props.name
-                    : `User id: ${this.props.userId}`}
+                  {this.state.user.name}
                 </div>
                 <div className="medium">
-                  {this.props.nick
-                    ? this.props.nick
-                    : null}
+                  {this.state.user.username}
                 </div>
                 <div className="medium">
-                  Antal saker kvar - callback
+                  {this.state.pendingNr} pending tasks
                 </div>
               </div>
             </div>
