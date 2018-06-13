@@ -43,7 +43,7 @@ export default class User extends React.Component {
             </div>
 
             <div className="secondhalf">
-              <div className="third">
+              <div className="third" title="Right now we can't display the ammount of pending tasks in this section. Click on the user to see the number of pending tasks.">
                 <div className="medium">
                   5
                 </div>
