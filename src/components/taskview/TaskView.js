@@ -24,6 +24,7 @@ export default class TaskView extends React.Component {
     return (
       <section>
         <Hero
+          userId={this.state.userId}
           name={this.props.location.state ? this.props.location.state.name : null}
           nick={this.props.location.state ? this.props.location.state.nick : null} />
         <TaskList

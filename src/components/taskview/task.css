@@ -1,0 +1,54 @@
+.task {
+  height: 110px;
+  padding: 0 12px;
+}
+
+.task .container {
+  height: 110px;
+  padding: 15px 0 13px 0;
+  border-bottom: 0.5px solid #0e48b6;
+  display: flex;
+  justify-content: space-between;
+}
+
+.task .firsthalf,
+.task .secondhalf {
+  display: flex;
+}
+
+.task .first {
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.task .icon {
+  height: 20px;
+}
+
+.task .icon > img {
+  height: 100%;
+}
+
+.task .second {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.task .third {
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 400px) {
+
+}
+
+@media (min-width: 600px) {
+
+}

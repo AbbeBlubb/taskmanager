@@ -38,7 +38,9 @@ export default class TaskList extends React.Component {
           {filteredArray.map(element => (
             <Task
               key={element.id}
-              id={element.id} />
+              id={element.id}
+              title={element.title}
+              completed={element.completed} />
           ))}
         </section>
       )

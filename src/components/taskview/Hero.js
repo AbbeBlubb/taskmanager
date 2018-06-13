@@ -18,12 +18,12 @@ export default class Hero extends React.Component {
               <div>
                 {this.props.name
                   ? this.props.name
-                  : "Name"}
+                  : `User number ${this.props.userId}`}
               </div>
               <div>
                 {this.props.nick
                   ? this.props.nick
-                  : "Nick"}
+                  : null}
               </div>
             </div>
             <div>
