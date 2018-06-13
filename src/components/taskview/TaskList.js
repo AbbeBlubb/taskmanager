@@ -19,7 +19,15 @@ export default class TaskList extends React.Component {
         taskList: json,
         informationIsDownloaded: true
       })
+      this.getPending()
     })
+  }
+
+  getPending = () => {
+    const pending = this.state.taskList.filter(element =>
+      element.userId === Number(this.props.userId) && !element.completed)
+    const pendingNr = pending.length
+    console.log(pendingNr)
   }
 
   render() {
