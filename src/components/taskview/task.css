@@ -19,10 +19,11 @@
 }
 
 .task .first {
-  width: 60px;
+  width: 20px;
+  margin-left: 5px;
+  margin-right: 10px;
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 .task .icon {
@@ -42,7 +43,6 @@
 }
 
 .task .second {
-
   display: flex;
   align-items: center;
 }
@@ -64,12 +64,20 @@
 }
 
 @media (min-width: 400px) {
+  .task .first {
+    margin-right: 15px;
+  }
+
   .task .tasktext {
     font-size: 15px;
   }
 }
 
 @media (min-width: 600px) {
+  .task .first {
+    margin-right: 20px;
+  }
+
   .task .tasktext {
     font-size: 17px;
   }

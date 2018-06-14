@@ -20,11 +20,15 @@
 
 .user .first {
   width: 65px;
-  padding-right: 5px;
+  margin-right: 5px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+}
+
+.user .first > div {
+  width: 65px;
+  text-align: center;
 }
 
 .user .nick {
@@ -58,9 +62,6 @@
   justify-content: center;
 }
 
-.user .third > div:nth-child(1) {
-}
-
 .user .third > div:nth-child(2) {
   width: 45px;
 }
@@ -78,6 +79,10 @@
 }
 
 @media (min-width: 400px) {
+  .user .first {
+    margin-right: 10px;
+  }
+
   .user .nick,
   .user .id {
     font-size: 12px;
@@ -100,9 +105,7 @@
 
 @media (min-width: 600px) {
   .user .first {
-    width: 115px;
-    padding-right: 15px;
-
+    margin-right: 55px;
   }
 
   .user .nick {
