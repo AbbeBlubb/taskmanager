@@ -15,9 +15,11 @@ export default class App extends React.Component {
   }
 
   handleChangeForSearchUser = event => {
+    event.preventDefault()
     this.setState({
       inputSearchUser: event.target.value
     })
+    console.log(event.target.value)
   }
 
   render() {
@@ -25,7 +27,7 @@ export default class App extends React.Component {
       <HashRouter>
         <div className="main">
           <Route exact path="/" component={Header} />
-          <Route exact path="/" render={() => <Filter handleChange={this.handleChangeForSearchUser} />}  />
+          <Route exact path="/" render={() => <Filter handleChange={this.handleChangeForSearchUser} />} />
           <Route exact path="/" component={UserList} />
           <Route exact path="/user/:id" component={TaskView} />
         </div>
