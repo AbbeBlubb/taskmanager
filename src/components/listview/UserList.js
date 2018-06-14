@@ -19,7 +19,6 @@ export default class UserList extends React.Component {
         users: json,
         informationIsDownloaded: true
       })
-      console.log(this.state.users)
     })
   }
 
@@ -31,9 +30,12 @@ export default class UserList extends React.Component {
         </section>
       )
     } else {
+      const filteredArray = this.state.users.filter(element => {
+        return element.name.indexOf(this.props.searchValue) !== -1
+      })
       return (
         <section className="userlist">
-          {this.state.users.map(user => (
+          {filteredArray.map(user => (
             <User
               key={user.id}
               id={user.id}
@@ -42,6 +44,7 @@ export default class UserList extends React.Component {
               email={user.email}
               city={user.address.city} />
           ))}
+          {console.log("Props:" + this.props.searchValue)}
         </section>
       )
     }

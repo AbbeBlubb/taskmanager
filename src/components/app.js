@@ -28,7 +28,7 @@ export default class App extends React.Component {
         <div className="main">
           <Route exact path="/" component={Header} />
           <Route exact path="/" render={() => <Filter handleChange={this.handleChangeForSearchUser} />} />
-          <Route exact path="/" component={UserList} />
+          <Route exact path="/" render={() => <UserList searchValue={this.state.inputSearchUser} />} />
           <Route exact path="/user/:id" component={TaskView} />
         </div>
       </HashRouter>

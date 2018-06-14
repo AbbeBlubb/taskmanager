@@ -17,7 +17,6 @@ export default class Filter extends React.Component {
             <img src={loupe} alt="Search user information (function not available right now)" title="Search user information (function not available right now)" />
           </div>
         </div>
-        {console.log("From Filter:" + this.props.handleChange)}
       </section>
     )
   }
