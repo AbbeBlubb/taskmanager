@@ -31,7 +31,7 @@ export default class UserList extends React.Component {
       )
     } else {
       const filteredArray = this.state.users.filter(element => {
-        return element.name.indexOf(this.props.searchValue) !== -1
+        return element.name.toLowerCase().indexOf(this.props.searchValue.toLowerCase()) !== -1
       })
       return (
         <section className="userlist">
