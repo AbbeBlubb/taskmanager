@@ -14,7 +14,7 @@ export default class Filter extends React.Component {
               onChange={event => this.props.handleChange(event)} />
           </div>
           <div className="search">
-            <img src={loupe} alt="Search user information (function not available right now)" title="Search user information (function not available right now)" />
+            <img src={loupe} alt="Search user information: name, username, e-mail, or city" title="Search user information: name, username, e-mail, or city" />
           </div>
         </div>
       </section>
