@@ -77,11 +77,11 @@ export default class Hero extends React.Component {
       return (
         <header className="hero">
           <div className="container">
-            <div className="back">
               <Link to="/">
+            <div className="back">
                 <img src={leftarrow} alt="Back to the list with users" title="Back to the list with users" />
-              </Link>
             </div>
+              </Link>
             <div className="userinfo">
               <div>
                 <div className="name">
