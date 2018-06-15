@@ -35,12 +35,10 @@ export default class TaskList extends React.Component {
     } else {
       return (
         <section className="list">
-          {filteredArray.map(element => (
+          {filteredArray.map(task => (
             <Task
-              key={element.id}
-              id={element.id}
-              title={element.title}
-              completed={element.completed} />
+              key={task.id}
+              task={task} />
           ))}
         </section>
       )

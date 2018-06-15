@@ -13,20 +13,20 @@ export default class Task extends React.Component {
 
           <div className="firsthalf">
             <div className="first">
-              <div className={this.props.completed ? "icon done" : "icon pending"}>
+              <div className={this.props.task.completed ? "icon done" : "icon pending"}>
                 <img src={document} alt="Task: blue for pending, green for done" title="Task: blue for pending, green for done" />
               </div>
             </div>
 
             <div className="second">
               <div className="tasktext small">
-                {this.props.title}
+                {this.props.task.title}
               </div>
             </div>
           </div>
 
           <div className="secondhalf">
-            {this.props.completed
+            {this.props.task.completed
               ?
               <div className="third">
                 <div className="icon">
