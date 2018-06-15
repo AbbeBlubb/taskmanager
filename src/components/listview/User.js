@@ -8,60 +8,62 @@ export default class User extends React.Component {
 
   render() {
     return (
-      <Link to={`/user/${this.props.id}`}>
-        <div className="user">
-          <div className="container borderbox">
+      <div className="user">
+        <div className="container1">
+          <Link to={`/user/${this.props.id}`}>
+            <div className="container2 borderbox">
 
-            <div className="firsthalf">
-              <div className="first">
-                <div className="userimage">
-                  <img src={user} alt="User icon" title="User icon" />
-                </div>
-                <div className="nick tiny gray">
-                  {this.props.nick}
-                </div>
-                <div className="tiny gray">
-                  Id: {this.props.id}
-                </div>
-              </div>
-
-              <div className="second">
-                <div>
-                  <div className="large">
-                    {this.props.name}
+              <div className="firsthalf">
+                <div className="first">
+                  <div className="userimage">
+                    <img src={user} alt="User icon" title="User icon" />
+                  </div>
+                  <div className="nick tiny gray">
+                    {this.props.nick}
+                  </div>
+                  <div className="tiny gray">
+                    Id: {this.props.id}
                   </div>
                 </div>
-                <div className="email small gray">
-                  {this.props.email}
-                </div>
-                <div className="city small gray">
+
+                <div className="second">
                   <div>
-                    {this.props.city}
+                    <div className="large">
+                      {this.props.name}
+                    </div>
+                  </div>
+                  <div className="email small gray">
+                    {this.props.email}
+                  </div>
+                  <div className="city small gray">
+                    <div>
+                      {this.props.city}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div className="secondhalf">
-              <div className="third" title="Right now we can't display the ammount of pending tasks in this section. Click on the user to see the number of pending tasks.">
-                <div className="medium">
-                  5
+              <div className="secondhalf">
+                <div className="third" title="Right now we can't display the ammount of pending tasks in this section. Click on the user to see the number of pending tasks.">
+                  <div className="medium">
+                    5
+                  </div>
+                  <div className="tiny gray">
+                    pending tasks
+                  </div>
                 </div>
-                <div className="tiny gray">
-                  pending tasks
+
+                <div className="fourth">
+                  <div className="userimage">
+                    <img src={rightarrow} alt="Go to the user's tasklist" title="Go to the user's tasklist" />
+                  </div>
                 </div>
               </div>
 
-              <div className="fourth">
-                <div className="userimage">
-                  <img src={rightarrow} alt="Go to the user's tasklist" title="Go to the user's tasklist" />
-                </div>
-              </div>
             </div>
-
-          </div>
+          </Link>
         </div>
-      </Link>
+      </div>
     )
   }
 
