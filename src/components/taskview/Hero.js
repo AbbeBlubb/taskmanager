@@ -54,7 +54,6 @@ export default class Hero extends React.Component {
       pendingNr,
       pendingNrIsDone: true
     })
-    console.log(this.state.pendingNr)
   }
 
   render() {
@@ -62,11 +61,11 @@ export default class Hero extends React.Component {
       return (
         <header className="hero">
           <div className="container">
-            <div className="back">
-              <Link to="/">
+            <Link to="/">
+              <div className="back">
                 <img src={leftarrow} alt="Back to the list with users" title="Back to the list with users" />
-              </Link>
-            </div>
+              </div>
+            </Link>
             <div className="loading large">
               Loading hero section...
             </div>
@@ -77,11 +76,11 @@ export default class Hero extends React.Component {
       return (
         <header className="hero">
           <div className="container">
-              <Link to="/">
-            <div className="back">
+            <Link to="/">
+              <div className="back">
                 <img src={leftarrow} alt="Back to the list with users" title="Back to the list with users" />
-            </div>
-              </Link>
+              </div>
+            </Link>
             <div className="userinfo">
               <div>
                 <div className="name">
