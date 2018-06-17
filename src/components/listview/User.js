@@ -8,7 +8,7 @@ export default class User extends React.Component {
 
   render() {
     return (
-      <div className="user">
+      <article className="user">
         <div className="container1">
           <Link to={`/user/${this.props.id}`}>
             <div className="container2 borderbox">
@@ -28,9 +28,9 @@ export default class User extends React.Component {
 
                 <div className="second">
                   <div>
-                    <div className="large">
+                    <h2 className="large">
                       {this.props.name}
-                    </div>
+                    </h2>
                   </div>
                   <div className="email small gray">
                     {this.props.email}
@@ -63,7 +63,7 @@ export default class User extends React.Component {
             </div>
           </Link>
         </div>
-      </div>
+      </article>
     )
   }
 

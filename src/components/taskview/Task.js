@@ -8,7 +8,7 @@ export default class Task extends React.Component {
 
   render() {
     return (
-      <div className="task">
+      <article className="task">
         <div className="container borderbox">
 
           <div className="firsthalf">
@@ -19,9 +19,9 @@ export default class Task extends React.Component {
             </div>
 
             <div className="second">
-              <div className="tasktext small">
+              <p className="tasktext small">
                 {this.props.task.title}
-              </div>
+              </p>
             </div>
           </div>
 
@@ -49,7 +49,7 @@ export default class Task extends React.Component {
           </div>
 
         </div>
-      </div>
+      </article>
     )
   }
 

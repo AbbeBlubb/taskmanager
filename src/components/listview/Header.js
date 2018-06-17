@@ -11,7 +11,7 @@ export default class Header extends React.Component {
         <div className="loggedinuser">
           <img src={user} alt="You are logged in!" title="You are logged in!" />
         </div>
-        <div className="title">Task Manager</div>
+        <h1 className="title">Task Manager</h1>
         <div className="settings">
           <img src={edit} alt="Create your own task" title="Create your own task" />
         </div>
