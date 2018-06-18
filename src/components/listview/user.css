@@ -33,6 +33,9 @@ Modifier = block__element--modifier / .block--modifier
 }
 
 .user .container2 {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   height: 110px;
   padding: 15px 3% 13px 3%;
   border-bottom: 0.5px solid rgba(14, 72, 182, 0.30);
@@ -46,8 +49,7 @@ Modifier = block__element--modifier / .block--modifier
   background-color: rgba(14, 72, 182, 0.10);
 }
 
-.user .firsthalf,
-.user .secondhalf {
+.user__stretch {
   display: flex;
 }
 
@@ -80,18 +82,24 @@ Modifier = block__element--modifier / .block--modifier
   text-decoration: underline;
 }
 
-.user .third {
+.user__pending {
   text-align: right;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-size: 10px;
+  color: #656565;
 }
 
-.user .third > div:nth-child(2) {
+.user__pending-nr {
+  font-size: 15px;
+}
+
+.user__pending-text {
   width: 45px;
 }
 
-.user .fourth {
+.user__link {
   margin: auto 0 auto 15px;
 }
 
@@ -105,7 +113,7 @@ Modifier = block__element--modifier / .block--modifier
     font-size: 12px;
   }
 
-  .user .third > div:nth-child(2) {
+  .user__pending-text {
     width: 50px;
     font-size: 12px;
   }
@@ -115,7 +123,7 @@ Modifier = block__element--modifier / .block--modifier
     font-size: 15px;
   }
 
-  .user .fourth {
+  .user__link {
     margin: auto 0 auto 30px;
   }
 }
@@ -130,7 +138,7 @@ Modifier = block__element--modifier / .block--modifier
     overflow-wrap: break-word;
   }
 
-  .user .fourth {
+  .user__link {
     margin: auto 0 auto 50px;
   }
 }

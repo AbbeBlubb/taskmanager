@@ -11,9 +11,9 @@ export default class User extends React.Component {
       <article className="user">
         <div className="container1">
           <Link to={`/user/${this.props.id}`}>
-            <div className="container2 borderbox">
+            <div className="container2">
 
-              <div className="firsthalf">
+              <div className="user__stretch">
                 <div className="first">
                   <div>
                     <img className="icon--small" src={user} alt="User icon" title="User icon" />
@@ -43,20 +43,18 @@ export default class User extends React.Component {
                 </div>
               </div>
 
-              <div className="secondhalf">
-                <div className="third" title="Right now we can't display the ammount of pending tasks in this section. Click on the user to see the number of pending tasks.">
-                  <div className="medium">
+              <div className="user__stretch">
+                <div className="user__pending" title="Right now we can't display the ammount of pending tasks in this section. Click on the user to see the number of pending tasks.">
+                  <div className="user__pending-nr">
                     5
                   </div>
-                  <div className="tiny gray">
+                  <div className="user__pending-text">
                     pending tasks
                   </div>
                 </div>
 
-                <div className="fourth">
-                  <div>
-                    <img className="icon--small" src={rightarrow} alt="Go to the user's tasklist" title="Go to the user's tasklist" />
-                  </div>
+                <div className="user__link">
+                  <img className="icon--small" src={rightarrow} alt="Go to the user's tasklist" title="Go to the user's tasklist" />
                 </div>
               </div>
 
