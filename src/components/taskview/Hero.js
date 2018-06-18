@@ -60,13 +60,13 @@ export default class Hero extends React.Component {
     if (!this.state.userInfoIsDone || !this.state.pendingNrIsDone) {
       return (
         <header className="hero">
-          <div className="container">
+          <div className="hero__container">
             <Link to="/">
-              <div className="back">
-                <img src={leftarrow} alt="Back to the list with users" title="Back to the list with users" />
+              <div className="hero__back">
+                <img className="icon" src={leftarrow} alt="Back to the list with users" title="Back to the list with users" />
               </div>
             </Link>
-            <div className="loading large">
+            <div className="hero__loading">
               Loading hero section...
             </div>
           </div>
@@ -75,21 +75,21 @@ export default class Hero extends React.Component {
     } else {
       return (
         <header className="hero">
-          <div className="container">
+          <div className="hero__container">
             <Link to="/">
-              <div className="back">
-                <img src={leftarrow} alt="Back to the list with users" title="Back to the list with users" />
+              <div className="hero__back">
+                <img className="icon" src={leftarrow} alt="Back to the list with users" title="Back to the list with users" />
               </div>
             </Link>
-            <div className="userinfo">
+            <div className="hero__userinfo">
               <div>
-                <h2 className="name">
+                <h2 className="hero__name">
                   {this.state.user.name}
                 </h2>
-                <div className="medium">
+                <div className="hero__username">
                   {this.state.user.username}
                 </div>
-                <div className="medium">
+                <div className="hero__pendingnr">
                   {this.state.pendingNr} pending tasks
                 </div>
               </div>

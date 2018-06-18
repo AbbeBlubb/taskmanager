@@ -7,14 +7,10 @@ export default class Header extends React.Component {
 
   render() {
     return (
-      <header className="listheader">
-        <div className="loggedinuser">
-          <img src={user} alt="You are logged in!" title="You are logged in!" />
-        </div>
-        <h1 className="title">Task Manager</h1>
-        <div className="settings">
-          <img src={edit} alt="Create your own task" title="Create your own task" />
-        </div>
+      <header className="header">
+        <img className="icon" src={user} alt="You are logged in!" title="You are logged in!" />
+        <h1 className="header__title">Task Manager</h1>
+        <img className="icon" src={edit} alt="Create your own task" title="Create your own task" />
       </header>
     )
   }

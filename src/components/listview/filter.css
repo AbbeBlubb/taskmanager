@@ -1,29 +1,35 @@
+/*
+
+This stylesheet is written in BEM
+
+Block = .block
+Element = block__element
+Modifier = block__element--modifier / .block--modifier
+
+*/
+
+/* Blocks ******************************/
+
 .filter {
   height: 35px;
   font-size: 15px;
   border-bottom: 0.5px solid #0e48b6;
   padding: 12px 15px;
-}
-
-.filter .container {
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
-.inputfield {
+.search {
   background-color: rgba(14, 72, 182, 0.10);
   padding: 5px 10px;
   border-style: none;
   margin-right: 15px;
   font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
   font-weight: 200;
 }
 
-.filter .search {
-  height: 30px;
-}
+/* Elements ****************************/
 
-.filter .search > img {
-  height: 100%;
-}
+/* Modifiers ***************************/

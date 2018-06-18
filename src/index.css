@@ -10,14 +10,20 @@ Modifier = block__element--modifier / .block--modifier
 
 /* Blocks ******************************/
 
+.icon {
+  height: 30px;
+  width: 30px;
+}
 
 /* Elements ****************************/
 
 
 /* Modifiers ***************************/
 
-
-
+.icon--small {
+  height: 20px;
+  width: 20px;
+}
 
 /* ----------------------------------- */
 

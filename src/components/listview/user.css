@@ -1,3 +1,26 @@
+/*
+
+This stylesheet is written in BEM
+
+Block = .block
+Element = block__element
+Modifier = block__element--modifier / .block--modifier
+
+*/
+
+/* Blocks ******************************/
+
+
+/* Elements ****************************/
+
+
+/* Modifiers ***************************/
+
+
+
+
+/* ----------------------------------- */
+
 .user {
   height: 110px;
   padding: 0 2%;
@@ -46,14 +69,6 @@
   overflow-wrap: break-word;
 }
 
-.user .userimage {
-  height: 20px;
-}
-
-.user .userimage > img {
-  height: 100%;
-}
-
 .user .second {
   height: 100%;
   display: flex;
@@ -78,14 +93,6 @@
 
 .user .fourth {
   margin: auto 0 auto 15px;
-}
-
-.user .fourth > div {
-  height: 20px;
-}
-
-.user .fourth > div > img {
-  height: 100%;
 }
 
 @media (min-width: 400px) {
