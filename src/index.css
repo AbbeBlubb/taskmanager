@@ -25,6 +25,14 @@ Modifier = block__element--modifier / .block--modifier
   width: 20px;
 }
 
+.icon--done {
+  background-color: rgba(83, 255, 29, 0.15);
+}
+
+.icon--pending {
+  background-color: rgba(0, 0, 255, 0.15);
+}
+
 /* ----------------------------------- */
 
 

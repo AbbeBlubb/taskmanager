@@ -9,39 +9,39 @@ export default class Task extends React.Component {
   render() {
     return (
       <article className="task">
-        <div className="container borderbox">
+        <div className="task__container">
 
-          <div className="firsthalf">
-            <div className="first">
-              <div className={this.props.task.completed ? "icon done" : "icon pending"}>
-                <img src={document} alt="Task: blue for pending, green for done" title="Task: blue for pending, green for done" />
-              </div>
+          <div className="task__stretch">
+            <div className="task__color">
+              <img
+                className={this.props.task.completed
+                  ? "icon--small icon--done"
+                  : "icon--small icon--pending"}
+                src={document}
+                alt="Task: blue for pending, green for done"
+                title="Task: blue for pending, green for done" />
             </div>
 
-            <div className="second">
-              <p className="tasktext small">
+            <div className="task__content">
+              <p className="task__text">
                 {this.props.task.title}
               </p>
             </div>
           </div>
 
-          <div className="secondhalf">
+          <div className="task__stretch">
             {this.props.task.completed
               ?
-              <div className="third">
-                <div className="icon">
-                  <img src={checked} alt="This task is done" title="This task is done" />
-                </div>
-                <div className="tiny gray">
+              <div className="task__status">
+                <img className="icon--small" src={checked} alt="This task is done" title="This task is done" />
+                <div className="task__status-description">
                   Done
                 </div>
               </div>
               :
-              <div className="third">
-                <div className="icon">
-                  <img src={clock} alt="This task is pending" title="This task is pending" />
-                </div>
-                <div className="tiny gray">
+              <div className="task__status">
+                <img className="icon--small" src={clock} alt="This task is pending" title="This task is pending" />
+                <div className="task__status-description">
                   Pending
                 </div>
               </div>
