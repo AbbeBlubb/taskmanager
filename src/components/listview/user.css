@@ -10,29 +10,7 @@ Modifier = block__element--modifier / .block--modifier
 
 /* Blocks ******************************/
 
-
-/* Elements ****************************/
-
-
-/* Modifiers ***************************/
-
-
-
-
-/* ----------------------------------- */
-
 .user {
-  height: 110px;
-  padding: 0 2%;
-}
-
-.user .container1 {
-  height: 110px;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.user .container2 {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -45,15 +23,24 @@ Modifier = block__element--modifier / .block--modifier
   margin: 0 auto;
 }
 
-.user .container2:hover {
-  background-color: rgba(14, 72, 182, 0.10);
+/* Elements ****************************/
+
+.user__row {
+  height: 110px;
+  padding: 0 2%;
+}
+
+.user__center {
+  height: 110px;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .user__stretch {
   display: flex;
 }
 
-.user .first {
+.user__nick-box {
   width: 65px;
   margin-right: 5px;
   display: flex;
@@ -61,28 +48,45 @@ Modifier = block__element--modifier / .block--modifier
   justify-content: center;
 }
 
-.user .first > div {
+.user__nick-box > div {
   width: 65px;
   text-align: center;
 }
 
-.user .nick {
-  max-width: 70px;
+.user__nick {
   overflow-wrap: break-word;
+  font-size: 10px;
+  color: #656565;
 }
 
-.user .second {
+.user__id {
+  font-size: 10px;
+  color: #656565;
+}
+
+.user__name-box {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.user .email {
-  text-decoration: underline;
+.user__name {
+  font-size: 20px;
 }
 
-.user__pending {
+.user__email {
+  text-decoration: underline;
+  font-size: 13px;
+  color: #656565;
+}
+
+.user__city {
+  font-size: 13px;
+  color: #656565;
+}
+
+.user__pending-box {
   text-align: right;
   display: flex;
   flex-direction: column;
@@ -103,15 +107,20 @@ Modifier = block__element--modifier / .block--modifier
   margin: auto 0 auto 15px;
 }
 
+/* Modifiers ***************************/
+
+.user:hover {
+  background-color: rgba(14, 72, 182, 0.10);
+}
+
 /* Responsivity ************************/
 
 @media (min-width: 400px) {
-  .user .first {
+  .user__nick-box {
     margin-right: 10px;
   }
 
-  .user .nick,
-  .user .id {
+  .user__nick {
     font-size: 12px;
   }
 
@@ -120,8 +129,8 @@ Modifier = block__element--modifier / .block--modifier
     font-size: 12px;
   }
 
-  .user .email,
-  .user .city {
+  .user__email,
+  .user__city {
     font-size: 15px;
   }
 
@@ -131,13 +140,8 @@ Modifier = block__element--modifier / .block--modifier
 }
 
 @media (min-width: 600px) {
-  .user .first {
+  .user__nick-box {
     margin-right: 55px;
-  }
-
-  .user .nick {
-    max-width: 115px;
-    overflow-wrap: break-word;
   }
 
   .user__link {

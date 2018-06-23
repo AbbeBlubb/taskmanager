@@ -25,7 +25,7 @@ export default class UserList extends React.Component {
   render() {
     if (!this.state.informationIsDownloaded) {
       return (
-        <section className="userlist">
+        <section>
           Loading...
         </section>
       )
@@ -37,7 +37,7 @@ export default class UserList extends React.Component {
           element.username.toLowerCase().indexOf(this.props.searchValue.toLowerCase()) !== -1
       })
       return (
-        <section className="userlist">
+        <section>
           {filteredArray.map(user => (
             <User
               key={user.id}
@@ -47,7 +47,6 @@ export default class UserList extends React.Component {
               email={user.email}
               city={user.address.city} />
           ))}
-          {console.log("Props:" + this.props.searchValue)}
         </section>
       )
     }
