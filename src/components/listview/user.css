@@ -103,6 +103,8 @@ Modifier = block__element--modifier / .block--modifier
   margin: auto 0 auto 15px;
 }
 
+/* Responsivity ************************/
+
 @media (min-width: 400px) {
   .user .first {
     margin-right: 10px;
