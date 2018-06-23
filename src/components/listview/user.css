@@ -27,7 +27,7 @@ Modifier = block__element--modifier / .block--modifier
 
 .user__row {
   height: 110px;
-  padding: 0 2%;
+  padding: 0 2%; /* With this padding affects the border-bottom in .user */
 }
 
 .user__center {

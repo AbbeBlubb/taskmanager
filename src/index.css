@@ -50,27 +50,3 @@ Modifier = block__element--modifier / .block--modifier
 .icon--pending {
   background-color: rgba(0, 0, 255, 0.15);
 }
-
-/* ----------------------------------- */
-
-
-
-.gray {
-  color: #656565;
-}
-
-.tiny {
-  font-size: 10px;
-}
-
-.small {
-  font-size: 13px;
-}
-
-.medium {
-  font-size: 15px;
-}
-
-.large {
-  font-size: 20px;
-}
