@@ -8,6 +8,7 @@ export default class Filter extends React.Component {
     return (
       <section className="filter">
         <input
+          autoFocus="true"
           className="search"
           onChange={event => this.props.handleChange(event)} />
         <img className="icon" src={loupe} alt="Search user information: name, username, e-mail, or city" title="Search user information: name, username, e-mail, or city" />
