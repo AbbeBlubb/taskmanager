@@ -18,18 +18,18 @@ export default class Hero extends React.Component {
   }
 
   componentDidMount() {
-    fetch("https://jsonplaceholder.typicode.com/users").then(response => (
-      response.json()
-    )).then(json => {
+    fetch("https://jsonplaceholder.typicode.com/users")
+    .then(response => response.json())
+    .then(json => {
       this.setState({
         users: json
       })
       this.getUser()
     })
 
-    fetch("https://jsonplaceholder.typicode.com/todos").then(response => (
-      response.json()
-    )).then(json => {
+    fetch("https://jsonplaceholder.typicode.com/todos")
+    .then(response => response.json())
+    .then(json => {
       this.setState({
         taskList: json
       })

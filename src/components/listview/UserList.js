@@ -12,9 +12,9 @@ export default class UserList extends React.Component {
   }
 
   componentDidMount() {
-    fetch("https://jsonplaceholder.typicode.com/users").then(response => (
-      response.json()
-    )).then(json => {
+    fetch("https://jsonplaceholder.typicode.com/users")
+    .then(response => response.json())
+    .then(json => {
       this.setState({
         users: json,
         informationIsDownloaded: true
@@ -31,10 +31,12 @@ export default class UserList extends React.Component {
       )
     } else {
       const filteredArray = this.state.users.filter(element => {
-        return element.name.toLowerCase().indexOf(this.props.searchValue.toLowerCase()) !== -1 ||
+        return (
+          element.name.toLowerCase().indexOf(this.props.searchValue.toLowerCase()) !== -1 ||
           element.email.toLowerCase().indexOf(this.props.searchValue.toLowerCase()) !== -1 ||
           element.address.city.toLowerCase().indexOf(this.props.searchValue.toLowerCase()) !== -1 ||
           element.username.toLowerCase().indexOf(this.props.searchValue.toLowerCase()) !== -1
+        )
       })
       return (
         <section>
