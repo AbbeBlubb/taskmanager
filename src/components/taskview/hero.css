@@ -11,12 +11,14 @@ Modifier = block__element--modifier / .block--modifier
 /* Blocks ******************************/
 
 .hero {
+  position: relative;
   height: 250px;
   padding: 25px 10px;
   background: url("../../media/background-board-book-733854.jpg");
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center;
+
 }
 
 /* Elements ****************************/

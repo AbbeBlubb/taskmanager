@@ -57,6 +57,12 @@ export default class Hero extends React.Component {
   }
 
   render() {
+    window.addEventListener("scroll", () => {
+      let scrolled = window.pageYOffset
+      const background = document.querySelector(".hero")
+      background.style.top = `-${scrolled}px`
+    })
+
     if (!this.state.userInfoIsDone || !this.state.pendingNrIsDone) {
       return (
         <header className="hero">
