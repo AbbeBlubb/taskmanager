@@ -18,6 +18,10 @@ Modifier = block__element--modifier / .block--modifier
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  position: fixed;
+  width: calc(100% - 30px);
+  top: 60.5px;
+  background-color: #fafafa;
 }
 
 .search {

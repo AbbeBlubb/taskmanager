@@ -1,5 +1,6 @@
 import React from "react"
 import User from "./User"
+import "./userlist.css"
 
 export default class UserList extends React.Component {
 
@@ -39,7 +40,7 @@ export default class UserList extends React.Component {
         )
       })
       return (
-        <section>
+        <section className="userlist">
           {filteredArray.map(user => (
             <User
               key={user.id}
