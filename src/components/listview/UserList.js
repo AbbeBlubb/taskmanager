@@ -14,13 +14,13 @@ export default class UserList extends React.Component {
 
   componentDidMount() {
     fetch("https://jsonplaceholder.typicode.com/users")
-    .then(response => response.json())
-    .then(json => {
-      this.setState({
-        users: json,
-        informationIsDownloaded: true
+      .then(response => response.json())
+      .then(json => {
+        this.setState({
+          users: json,
+          informationIsDownloaded: true
+        })
       })
-    })
   }
 
   render() {
@@ -31,14 +31,12 @@ export default class UserList extends React.Component {
         </section>
       )
     } else {
-      const filteredArray = this.state.users.filter(element => {
-        return (
-          element.name.toLowerCase().indexOf(this.props.searchValue.toLowerCase()) !== -1 ||
+      const filteredArray = this.state.users.filter(element => (
+        element.name.toLowerCase().indexOf(this.props.searchValue.toLowerCase()) !== -1 ||
           element.email.toLowerCase().indexOf(this.props.searchValue.toLowerCase()) !== -1 ||
           element.address.city.toLowerCase().indexOf(this.props.searchValue.toLowerCase()) !== -1 ||
           element.username.toLowerCase().indexOf(this.props.searchValue.toLowerCase()) !== -1
-        )
-      })
+      ))
       return (
         <section className="userlist">
           {filteredArray.map(user => (

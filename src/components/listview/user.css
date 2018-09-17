@@ -77,6 +77,7 @@ Modifier = block__element--modifier / .block--modifier
 
 .user__email {
   text-decoration: underline;
+  text-transform: lowercase;
   font-size: 13px;
   color: #656565;
 }

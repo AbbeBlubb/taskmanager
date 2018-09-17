@@ -13,13 +13,13 @@ export default class TaskList extends React.Component {
 
   componentDidMount() {
     fetch("https://jsonplaceholder.typicode.com/todos")
-    .then(response => response.json())
-    .then(json => {
-      this.setState({
-        taskList: json,
-        informationIsDownloaded: true
+      .then(response => response.json())
+      .then(json => {
+        this.setState({
+          taskList: json,
+          informationIsDownloaded: true
+        })
       })
-    })
   }
 
   render() {
