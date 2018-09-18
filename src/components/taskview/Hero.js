@@ -35,6 +35,21 @@ export default class Hero extends React.Component {
         })
         this.getPending()
       })
+
+    window.addEventListener("scroll", this.parallax)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.parallax)
+  }
+
+  parallax = () => {
+    let scrolled = window.pageYOffset
+    const background = document.querySelector(".hero")
+    if (background) {
+      console.log(background)
+      background.style.top = `${scrolled * 0.4}px`
+    } else console.log(background)
   }
 
   getUser = () => {
@@ -57,12 +72,6 @@ export default class Hero extends React.Component {
   }
 
   render() {
-    window.addEventListener("scroll", () => {
-      let scrolled = window.pageYOffset
-      const background = document.querySelector(".hero")
-      background.style.top = `${scrolled * 0.4}px`
-    })
-
     if (!this.state.userInfoIsDone || !this.state.pendingNrIsDone) {
       return (
         <header className="hero">
