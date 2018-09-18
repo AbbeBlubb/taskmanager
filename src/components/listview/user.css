@@ -110,10 +110,6 @@ Modifier = block__element--modifier / .block--modifier
 
 /* Modifiers ***************************/
 
-.user:hover {
-  background-color: rgba(14, 72, 182, 0.10);
-}
-
 /* Responsivity ************************/
 
 @media (min-width: 400px) {

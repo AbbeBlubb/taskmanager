@@ -1,5 +1,6 @@
 import React from "react"
 import Task from "./Task"
+import "./tasklist.css"
 
 export default class TaskList extends React.Component {
 
@@ -34,7 +35,7 @@ export default class TaskList extends React.Component {
       )
     } else {
       return (
-        <section className="list">
+        <section className="tasklist">
           {filteredArray.map(task => (
             <Task
               key={task.id}

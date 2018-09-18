@@ -21,7 +21,6 @@ Modifier = block__element--modifier / .block--modifier
   position: fixed;
   width: calc(100% - 30px);
   top: 0;
-  background-color: #f0f0f0;
 }
 
 .header__title {
