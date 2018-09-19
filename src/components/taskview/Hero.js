@@ -44,12 +44,10 @@ export default class Hero extends React.Component {
   }
 
   parallax = () => {
-    let scrolled = window.pageYOffset
-    const background = document.querySelector(".hero")
-    if (background) {
-      console.log(background)
-      background.style.top = `${scrolled * 0.4}px`
-    } else console.log(background)
+    document.querySelector(".hero").style.top = `${window.pageYOffset * 0.4}px`
+    console.log(`${window.pageYOffset}\n` +
+                `${document.querySelector(".hero")}\n` +
+                `${document.querySelector(".hero").style.top}`)
   }
 
   getUser = () => {
