@@ -45,9 +45,9 @@ export default class Hero extends React.Component {
 
   parallax = () => {
     document.querySelector(".hero").style.top = `${window.pageYOffset * 0.4}px`
-    console.log(`${window.pageYOffset}\n` +
-                `${document.querySelector(".hero")}\n` +
-                `${document.querySelector(".hero").style.top}`)
+    console.log(`Y pixel: ${window.pageYOffset}\n` +
+                `Selected: ${document.querySelector(".hero")}\n` +
+                `.hero style top: ${document.querySelector(".hero").style.top}`)
   }
 
   getUser = () => {
