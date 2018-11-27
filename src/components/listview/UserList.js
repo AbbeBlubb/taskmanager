@@ -6,7 +6,7 @@ import "./userlist.css"
 class UserList extends React.Component {
 
   render() {
-    if (!this.props.userInformationIsDownloaded) {
+    if (!this.props.usersAreDownloaded) {
       return (
         <section>
           Loading... THIS DOESNT WORK
@@ -38,8 +38,8 @@ class UserList extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  users: state.storeUsersReducer.users,
-  userInformationIsDownloaded: state.storeUsersReducer.userInformationIsDownloaded
+  users: state.usersReducer.users,
+  usersAreDownloaded: state.usersReducer.usersAreDownloaded
 })
 
 export default connect(mapStateToProps)(UserList)
