@@ -1,37 +1,19 @@
 import React from "react"
+import { connect } from "react-redux"
 import User from "./User"
 import "./userlist.css"
 
-export default class UserList extends React.Component {
-
-  constructor(props) {
-    super(props)
-    this.state = {
-      users: [],
-      informationIsDownloaded: false
-    }
-  }
-
-  componentDidMount() {
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then(response => response.json())
-      .then(json => {
-        this.setState({
-          users: json,
-          informationIsDownloaded: true
-        })
-      })
-  }
+class UserList extends React.Component {
 
   render() {
-    if (!this.state.informationIsDownloaded) {
+    if (!this.props.userInformationIsDownloaded) {
       return (
         <section>
-          Loading...
+          Loading... THIS DOESNT WORK
         </section>
       )
     } else {
-      const filteredArray = this.state.users.filter(element => (
+      const filteredArray = this.props.users.filter(element => (
         element.name.toLowerCase().indexOf(this.props.searchValue.toLowerCase()) !== -1 ||
           element.email.toLowerCase().indexOf(this.props.searchValue.toLowerCase()) !== -1 ||
           element.address.city.toLowerCase().indexOf(this.props.searchValue.toLowerCase()) !== -1 ||
@@ -54,3 +36,10 @@ export default class UserList extends React.Component {
   }
 
 }
+
+const mapStateToProps = state => ({
+  users: state.storeUsersReducer.users,
+  userInformationIsDownloaded: state.storeUsersReducer.userInformationIsDownloaded
+})
+
+export default connect(mapStateToProps)(UserList)
