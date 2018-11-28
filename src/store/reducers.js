@@ -8,7 +8,7 @@ const initialState = {
 
 const oneUserReducerInitialState = {
   oneUser: [],
-  oneUserId: null
+  oneUserId: ''
 }
 
 const usersReducer = (state = initialState, action) => {
@@ -29,7 +29,7 @@ const oneUserReducer = (state = oneUserReducerInitialState, action) => {
       console.log(action)
       return {
         oneUser: { name: 'Abbe' }, /*action.users.find(element => element.id === Number(action.userId))*/
-        oneUserId: action.userId
+        oneUserId: 30
       }
       
     default: return state
