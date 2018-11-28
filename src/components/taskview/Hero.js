@@ -1,13 +1,11 @@
 import React from "react"
-import { connect } from 'react-redux'
 import { Link } from "react-router-dom"
 import "./hero.css"
 import leftarrow from "../../media/left-arrow.png"
-import { getOneUser } from "../../store/actions"
 
-class Hero extends React.Component {
+export default class Hero extends React.Component {
 
-/*  constructor(props) {
+  constructor(props) {
     super(props)
     this.state = {
       users: [],
@@ -17,10 +15,10 @@ class Hero extends React.Component {
       userInfoIsDone: false,
       pendingNrIsDone: false
     }
-  }*/
+  }
 
   componentDidMount() {
-/*    fetch("https://jsonplaceholder.typicode.com/users")
+    fetch("https://jsonplaceholder.typicode.com/users")
       .then(response => response.json())
       .then(json => {
         this.setState({
@@ -36,12 +34,8 @@ class Hero extends React.Component {
           taskList: json
         })
         this.getPending()
-      })*/
+      })
 
-    this.props.getOneUser(this.props.users, this.props.userId)
-    console.log(this.props.users)
-    console.log(this.props.userId)
-    console.log(this.props.oneUser.name)
     window.addEventListener("scroll", this.parallax)
   }
 
@@ -56,15 +50,14 @@ class Hero extends React.Component {
                 `.hero style top: ${document.querySelector(".hero").style.top}`)
   }
 
-  /*  getUser = () => {
+  getUser = () => {
     const user = this.state.users.find(element => element.id === Number(this.props.userId))
     this.setState({
       user,
       userInfoIsDone: true
     })
     console.log(this.state.user)
-  } */
-  
+  }
 
   getPending = () => {
     const pending = this.state.taskList.filter(element =>
@@ -77,7 +70,7 @@ class Hero extends React.Component {
   }
 
   render() {
-    if (this.props.oneUserId !== this.props.userId) {
+    if (!this.state.userInfoIsDone || !this.state.pendingNrIsDone) {
       return (
         <header className="hero">
           <div className="hero__container">
@@ -104,10 +97,10 @@ class Hero extends React.Component {
             <div className="hero__userinfo">
               <div>
                 <h2 className="hero__name">
-                  {this.props.oneUser.name}
+                  {this.state.user.name}
                 </h2>
                 <div className="hero__username">
-                  {this.props.oneUser.username}
+                  {this.state.user.username}
                 </div>
                 <div className="hero__pendingnr">
                   {this.state.pendingNr} pending tasks
@@ -121,15 +114,3 @@ class Hero extends React.Component {
   }
 
 }
-
-const mapStateToProps = state => ({
-  users: state.usersReducer.users,
-  oneUser: state.oneUserReducer.oneUser,
-  oneUserId: state.oneUserReducer.oneUserId
-})
-
-const mapDispatchToProps = dispatch => ({
-  getOneUser: (users, userId) => dispatch(getOneUser(users, userId))
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(Hero)

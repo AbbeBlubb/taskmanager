@@ -1,44 +1,37 @@
 import { combineReducers } from "redux"
-import { STORE_USERS, GET_ONE_USER, STORE_TASKS } from "./actions"
+import { STORE_USERS, STORE_TASKS } from "./actions"
 
 const initialState = {
   users: [],
-  usersAreDownloaded: false
+  userInformationIsDownloaded: false
 }
 
-const oneUserReducerInitialState = {
-  oneUser: [],
-  oneUserId: null
-}
-
-const usersReducer = (state = initialState, action) => {
+const storeUsersReducer = (state = initialState, action) => {
   switch (action.type) {
     case STORE_USERS:
       return {
         users: action.json,
-        usersAreDownloaded: true
+        userInformationIsDownloaded: true
       }
 
     default: return state
   }
 }
 
-const oneUserReducer = (state = oneUserReducerInitialState, action) => {
+const storeTasksReducer = (state = initialState, action) => {
   switch (action.type) {
-    case GET_ONE_USER:
-      console.log(action)
+    case STORE_TASKS:
       return {
-        oneUser: { name: 'Abbe' }, /*action.users.find(element => element.id === Number(action.userId))*/
-        oneUserId: action.userId
+        tasks: action.json
       }
-      
+
     default: return state
   }
 }
 
 const reducers = combineReducers({
-  usersReducer,
-  oneUserReducer
+  storeUsersReducer,
+  storeTasksReducer
 })
 
 export default reducers
