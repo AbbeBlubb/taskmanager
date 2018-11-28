@@ -13,8 +13,8 @@ export function storeUsers(json) {
   return { type: STORE_USERS, json }
 }
 
-export function getOneUser(box) {
-  return { type: GET_ONE_USER, users: box.users, userId: box.userId }
+export function getOneUser(users, userId) {
+  return { type: GET_ONE_USER, users, userId }
 }
 
 export function storeTasks(json) {

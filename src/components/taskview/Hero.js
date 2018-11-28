@@ -38,13 +38,10 @@ class Hero extends React.Component {
         this.getPending()
       })*/
 
-      const box = {
-        users: this.props.users,
-        userId: this.props.userId
-      }
-      console.log(box)
-
-    this.props.getOneUser(box)
+    this.props.getOneUser(this.props.users, this.props.userId)
+    console.log(this.props.users)
+    console.log(this.props.userId)
+    console.log(this.props.oneUser.name)
     window.addEventListener("scroll", this.parallax)
   }
 
@@ -80,11 +77,6 @@ class Hero extends React.Component {
   }
 
   render() {
-
-    console.log(this.props.users)
-    console.log(this.props.userId)
-    console.log(this.props.oneUser.name)
-
     if (this.props.oneUserId !== this.props.userId) {
       return (
         <header className="hero">
@@ -118,7 +110,7 @@ class Hero extends React.Component {
                   {this.props.oneUser.username}
                 </div>
                 <div className="hero__pendingnr">
-                  X pending tasks
+                  {this.state.pendingNr} pending tasks
                 </div>
               </div>
             </div>
@@ -137,7 +129,7 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  getOneUser: (box) => dispatch(getOneUser(box))
+  getOneUser: (users, userId) => dispatch(getOneUser(users, userId))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Hero)
