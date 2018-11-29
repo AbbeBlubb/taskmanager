@@ -2,8 +2,9 @@ import React from "react"
 import { Link } from "react-router-dom"
 import "./hero.css"
 import leftarrow from "../../media/left-arrow.png"
+import connect from "react-redux/es/connect/connect"
 
-export default class Hero extends React.Component {
+class Hero extends React.Component {
 
   constructor(props) {
     super(props)
@@ -18,14 +19,16 @@ export default class Hero extends React.Component {
   }
 
   componentDidMount() {
-    fetch("https://jsonplaceholder.typicode.com/users")
+/*    fetch("https://jsonplaceholder.typicode.com/users")
       .then(response => response.json())
       .then(json => {
         this.setState({
           users: json
         })
-        this.getUser()
-      })
+        
+      })*/
+  
+    this.getUser()
 
     fetch("https://jsonplaceholder.typicode.com/todos")
       .then(response => response.json())
@@ -51,7 +54,8 @@ export default class Hero extends React.Component {
   }
 
   getUser = () => {
-    const user = this.state.users.find(element => element.id === Number(this.props.userId))
+    console.log(this.props.users)
+    const user = this.props.users.find(element => element.id === Number(this.props.userId))
     this.setState({
       user,
       userInfoIsDone: true
@@ -96,7 +100,7 @@ export default class Hero extends React.Component {
             </Link>
             <div className="hero__userinfo">
               <div>
-                <h2 className="hero__name">
+{/*                <h2 className="hero__name">
                   {this.state.user.name}
                 </h2>
                 <div className="hero__username">
@@ -104,7 +108,7 @@ export default class Hero extends React.Component {
                 </div>
                 <div className="hero__pendingnr">
                   {this.state.pendingNr} pending tasks
-                </div>
+                </div>*/}
               </div>
             </div>
           </div>
@@ -112,5 +116,11 @@ export default class Hero extends React.Component {
       )
     }
   }
-
+  
 }
+
+const mapStateToProps = state => ({
+  users: state.storeUsersReducer.users
+})
+
+export default connect(mapStateToProps)(Hero)
