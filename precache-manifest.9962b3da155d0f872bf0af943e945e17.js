@@ -32,7 +32,7 @@ self.__precacheManifest = [
     "url": "/taskmanager/static/media/background-board-book-733854.a254c645.jpg"
   },
   {
-    "revision": "ced5d3934b1f3d12d3235a229c757166",
+    "revision": "c318f56b8fd6960de8862481e7624b1a",
     "url": "/taskmanager/index.html"
   }
 ];
