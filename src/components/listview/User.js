@@ -1,8 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import "./user.css"
-import user from "../../media/user.png"
-import rightarrow from "../../media/right-arrow-1.png"
+import user from "../../assets/user.png"
+import rightarrow from "../../assets/right-arrow-1.png"
 
 export default class User extends React.Component {
 

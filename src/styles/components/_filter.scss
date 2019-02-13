@@ -1,0 +1,23 @@
+.filter {
+  height: 35px;
+  font-size: 15px;
+  border-bottom: 0.5px solid #0e48b6;
+  padding: 12px 15px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  width: calc(100% - 30px);
+  top: 60.5px;
+
+  &__search {
+    padding: 5px 10px;
+    border-style: none;
+    margin-right: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 200;
+  }
+}
+
+

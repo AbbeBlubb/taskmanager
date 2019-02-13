@@ -1,8 +1,7 @@
 import React from "react"
-import "./task.css"
-import document from "../../media/document.png"
-import checked from "../../media/checked.png"
-import clock from "../../media/clock.png"
+import document from "../../assets/document.png"
+import checked from "../../assets/checked.png"
+import clock from "../../assets/clock.png"
 
 export default class Task extends React.Component {
 

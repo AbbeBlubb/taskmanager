@@ -1,6 +1,5 @@
 import React from "react"
 import Task from "./Task"
-import "./tasklist.css"
 
 export default class TaskList extends React.Component {
 

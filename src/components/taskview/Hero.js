@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import "./hero.css"
-import leftarrow from "../../media/left-arrow.png"
+import leftarrow from "../../assets/left-arrow.png"
 import connect from "react-redux/es/connect/connect"
 
 class Hero extends React.Component {

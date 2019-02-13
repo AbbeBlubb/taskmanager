@@ -1,6 +1,5 @@
 import React from "react"
-import loupe from "../../media/loupe.png"
-import "./filter.css"
+import loupe from "../../assets/loupe.png"
 
 export default class Filter extends React.Component {
 
@@ -9,7 +8,7 @@ export default class Filter extends React.Component {
       <section className="filter">
         <input
           autoFocus="{true}"
-          className="search"
+          className="filter__search"
           onChange={event => this.props.handleChange(event)} />
         <img className="icon" src={loupe} alt="Search user information: name, username, e-mail, or city" title="Search user information: name, username, e-mail, or city" />
       </section>

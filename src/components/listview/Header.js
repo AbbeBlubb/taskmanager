@@ -1,7 +1,6 @@
 import React from "react"
-import "./header.css"
-import user from "../../media/user.png"
-import edit from "../../media/edit.png"
+import user from "../../assets/user.png"
+import edit from "../../assets/edit.png"
 
 export default class Header extends React.Component {
 
