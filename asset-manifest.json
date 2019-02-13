@@ -1,10 +1,17 @@
 {
-  "main.css": "static/css/main.28e9cefb.css",
-  "main.css.map": "static/css/main.28e9cefb.css.map",
-  "main.js": "static/js/main.24da8b79.js",
-  "main.js.map": "static/js/main.24da8b79.js.map",
-  "static\\media\\background-board-book-733854.jpg": "static/media/background-board-book-733854.a254c645.jpg",
-  "static\\media\\clock.png": "static/media/clock.b7890862.png",
-  "static\\media\\right-arrow-1.png": "static/media/right-arrow-1.0d7414cf.png",
-  "static\\media\\user.png": "static/media/user.9c5ad19e.png"
+  "main.css": "/taskmanager/static/css/main.9cc5d415.chunk.css",
+  "main.js": "/taskmanager/static/js/main.1402ac5b.chunk.js",
+  "main.js.map": "/taskmanager/static/js/main.1402ac5b.chunk.js.map",
+  "static/js/1.1cc0018d.chunk.js": "/taskmanager/static/js/1.1cc0018d.chunk.js",
+  "static/js/1.1cc0018d.chunk.js.map": "/taskmanager/static/js/1.1cc0018d.chunk.js.map",
+  "runtime~main.js": "/taskmanager/static/js/runtime~main.6a0307bc.js",
+  "runtime~main.js.map": "/taskmanager/static/js/runtime~main.6a0307bc.js.map",
+  "static/media/user.png": "/taskmanager/static/media/user.9c5ad19e.png",
+  "static/media/right-arrow-1.png": "/taskmanager/static/media/right-arrow-1.0d7414cf.png",
+  "static/media/clock.png": "/taskmanager/static/media/clock.b7890862.png",
+  "static/media/styles.scss": "/taskmanager/static/media/background-board-book-733854.a254c645.jpg",
+  "static/css/main.9cc5d415.chunk.css.map": "/taskmanager/static/css/main.9cc5d415.chunk.css.map",
+  "index.html": "/taskmanager/index.html",
+  "precache-manifest.4a6a11bc8415cc4dd510ce9af3cf2a2e.js": "/taskmanager/precache-manifest.4a6a11bc8415cc4dd510ce9af3cf2a2e.js",
+  "service-worker.js": "/taskmanager/service-worker.js"
 }
