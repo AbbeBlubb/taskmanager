@@ -13,6 +13,7 @@ export default class User extends React.Component {
 
             <div className="user__stretch">
               
+              {/* Icon with nickname */}
               <div className="user__nickname-wrap">
                 <div>
                   <img
@@ -28,6 +29,7 @@ export default class User extends React.Component {
                 </div>
               </div>
 
+              {/* Personal details */}
               <div className="user__name-box">
                 <div>
                   <h2 className="user__name">
@@ -45,8 +47,10 @@ export default class User extends React.Component {
               </div>
               
             </div>
-
+            
             <div className="user__stretch">
+            
+              {/* Pending tasks */}
               <div
                 className="user__pending-box"
                 title="Right now we can't display the amount of pending tasks in this section. Click on the user to see the number of pending tasks.">
@@ -58,9 +62,11 @@ export default class User extends React.Component {
                 </div>
               </div>
 
+              {/* Link icon */}
               <div className="user__link">
                 <img className="icon--small" src={rightarrow} alt="Go to the user's tasklist" title="Go to the user's tasklist" />
               </div>
+              
             </div>
 
           </div>
