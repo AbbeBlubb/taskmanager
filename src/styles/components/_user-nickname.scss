@@ -1,0 +1,41 @@
+.user-nickname {
+  width: 65px;
+  margin-right: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .user-nickname__img-wrap {
+    width: 65px;
+    text-align: center;
+  }
+
+  .user-nickname__nickname {
+    overflow-wrap: break-word;
+    font-size: 10px;
+    color: #656565;
+    text-align: center;
+  }
+
+  .user-nickname__id {
+    font-size: 10px;
+    color: #656565;
+    text-align: center;
+  }
+}
+
+@media (min-width: 400px) {
+  .user-nickname {
+    margin-right: 10px;
+
+    .user-nickname__nickname {
+      font-size: 12px;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .user-nickname {
+    margin-right: 55px;
+  }
+}

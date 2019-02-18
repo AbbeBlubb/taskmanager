@@ -1,0 +1,15 @@
+.user-link-to-tasks {
+  margin: auto 0 auto 15px;
+}
+
+@media (min-width: 400px) {
+  .user-link-to-tasks {
+    margin: auto 0 auto 30px;
+  }
+}
+
+@media (min-width: 600px) {
+  .user-link-to-tasks {
+    margin: auto 0 auto 50px;
+  }
+}

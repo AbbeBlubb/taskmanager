@@ -77,3 +77,12 @@ Modifier = block__element--modifier / .block--modifier
 .icon--pending {
   background-color: rgba(0, 0, 255, 0.15);
 }
+
+.flex {
+  display: flex;
+}
+
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
+}

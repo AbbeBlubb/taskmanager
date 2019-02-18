@@ -6,5 +6,10 @@
 @import './components/loader';
 @import './components/task';
 @import './components/tasklist';
-@import './components/user';
 @import './components/userlist';
+
+@import './components/user';
+@import './components/user-nickname';
+@import './components/user-personal-details';
+@import './components/user-pending-tasks';
+@import './components/user-link-to-tasks';

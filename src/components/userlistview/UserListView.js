@@ -3,7 +3,7 @@ import Header from "./Header"
 import Filter from "./Filter"
 import UserList from "./UserList"
 
-export default class UserView extends React.Component {
+export default class UserListView extends React.Component {
 
   constructor(props) {
     super(props)
