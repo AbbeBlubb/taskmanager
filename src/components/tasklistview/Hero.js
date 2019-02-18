@@ -111,7 +111,7 @@ class Hero extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  users: state.storeUsersReducer.users
+  users: state.usersReducer.users
 })
 
 export default connect(mapStateToProps)(Hero)

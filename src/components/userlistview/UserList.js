@@ -2,11 +2,26 @@ import React from "react"
 import { connect } from "react-redux"
 import User from "./user/User"
 import { Loader } from "./Loader"
+import { USERS_URL, FETCH_USERS_START, FETCH_USERS_SUCCESSFUL, FETCH_USERS_ERROR } from "../../store/actions"
 
 class UserList extends React.Component {
 
+  componentDidMount() {
+    this.props.dispatch(dispatch => {
+      dispatch({ type: FETCH_USERS_START })
+      fetch(USERS_URL)
+        .then(response => response.json())
+        .then(json => {
+          dispatch({ type: FETCH_USERS_SUCCESSFUL, payload: json })
+        })
+        .catch(error => {
+          dispatch({ type: FETCH_USERS_ERROR, payload: error })
+        })
+    })
+  }
+  
   render() {
-    if (!this.props.userInformationIsDownloaded) {
+    if (!this.props.fetched) {
       return <Loader />
     } else {
 
@@ -36,8 +51,8 @@ class UserList extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  users: state.storeUsersReducer.users,
-  userInformationIsDownloaded: state.storeUsersReducer.userInformationIsDownloaded
+  users: state.usersReducer.users,
+  fetched: state.usersReducer.fetched
 })
 
 export default connect(mapStateToProps)(UserList)

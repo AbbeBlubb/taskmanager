@@ -1,18 +1,10 @@
 import React from "react"
 import { HashRouter, Route } from "react-router-dom"
-import { connect } from "react-redux"
 import UserListView from "./userlistview/UserListView"
 import TaskListView from "./tasklistview/TaskListView"
-import { USERS, storeUsers } from "../store/actions"
 
-class App extends React.Component {
-
-  componentDidMount() {
-    fetch(USERS)
-      .then(response => response.json())
-      .then(json => this.props.storeUsers(json))
-  }
-
+export default class App extends React.Component {
+  
   render() {
     return (
       <HashRouter>
@@ -25,9 +17,3 @@ class App extends React.Component {
   }
 
 }
-
-const mapDispatchToProps = dispatch => ({
-  storeUsers: json => dispatch(storeUsers(json))
-})
-
-export default connect(null, mapDispatchToProps)(App)
