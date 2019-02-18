@@ -2,7 +2,7 @@ import React from "react"
 import { HashRouter, Route } from "react-router-dom"
 import { connect } from "react-redux"
 import UserListView from "./userlistview/UserListView"
-import TaskView from "./taskview/TaskView"
+import TaskListView from "./tasklistview/TaskListView"
 import { USERS, storeUsers } from "../store/actions"
 
 class App extends React.Component {
@@ -18,7 +18,7 @@ class App extends React.Component {
       <HashRouter>
         <div className="main">
           <Route exact path="/" component={UserListView} />
-          <Route exact path="/user/:id" component={TaskView} />
+          <Route exact path="/user/:id" component={TaskListView} />
         </div>
       </HashRouter>
     )

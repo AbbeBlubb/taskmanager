@@ -1,14 +1,19 @@
 import { combineReducers } from "redux"
-import { STORE_USERS, STORE_TASKS } from "./actions"
+import { GET_USERS, GET_TASKS } from "./actions"
 
-const initialState = {
+const initialStateForUsers = {
   users: [],
-  userInformationIsDownloaded: false
+  usersAreDownloaded: false
 }
 
-const storeUsersReducer = (state = initialState, action) => {
+const initialStateForTasks = {
+  tasks: [],
+  tasksAreDownloaded: false
+}
+
+const storeUsersReducer = (state = initialStateForUsers, action) => {
   switch (action.type) {
-    case STORE_USERS:
+    case GET_USERS:
       return {
         users: action.json,
         userInformationIsDownloaded: true
@@ -18,9 +23,9 @@ const storeUsersReducer = (state = initialState, action) => {
   }
 }
 
-const storeTasksReducer = (state = initialState, action) => {
+const storeTasksReducer = (state = initialStateForTasks, action) => {
   switch (action.type) {
-    case STORE_TASKS:
+    case GET_TASKS:
       return {
         tasks: action.json
       }

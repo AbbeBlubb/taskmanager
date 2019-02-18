@@ -8,8 +8,8 @@
 @import './components/tasklist';
 @import './components/userlist';
 
-@import './components/user';
-@import './components/user-nickname';
-@import './components/user-personal-details';
-@import './components/user-pending-tasks';
-@import './components/user-link-to-tasks';
+@import 'components/user/user';
+@import 'components/user/user-nickname';
+@import 'components/user/user-personal-details';
+@import 'components/user/user-pending-tasks';
+@import 'components/user/user-link-to-tasks';

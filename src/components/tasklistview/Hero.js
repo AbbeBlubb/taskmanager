@@ -73,47 +73,39 @@ class Hero extends React.Component {
   }
 
   render() {
-    if (!this.state.userInfoIsDone || !this.state.pendingNrIsDone) {
-      return (
-        <header className="hero">
-          <div className="hero__container">
-            <Link to="/">
-              <div className="hero__back">
-                <img className="icon" src={leftarrow} alt="Back to the list with users" title="Back to the list with users" />
-              </div>
-            </Link>
-            <div className="hero__loading">
-              Loading hero section...
+    return (
+      <header className="hero">
+        <div className="hero__container">
+          <Link to="/">
+            <div className="hero__back">
+              <img className="icon" src={leftarrow} alt="Back to the list with users" title="Back to the list with users" />
             </div>
-          </div>
-        </header>
-      )
-    } else {
-      return (
-        <header className="hero">
-          <div className="hero__container">
-            <Link to="/">
-              <div className="hero__back">
-                <img className="icon" src={leftarrow} alt="Back to the list with users" title="Back to the list with users" />
+          </Link>
+          
+          {(!this.state.userInfoIsDone || !this.state.pendingNrIsDone)
+            ?
+              <div className="hero__loading">
+                Loading hero section...
               </div>
-            </Link>
-            <div className="hero__userinfo">
-              <div>
-{/*                <h2 className="hero__name">
-                  {this.state.user.name}
-                </h2>
-                <div className="hero__username">
-                  {this.state.user.username}
+            :
+              <div className="hero__userinfo">
+                <div>
+                  {/*
+                  <h2 className="hero__name">
+                    {this.state.user.name}
+                  </h2>
+                  <div className="hero__username">
+                    {this.state.user.username}
+                  </div>
+                  <div className="hero__pendingnr">
+                    {this.state.pendingNr} pending tasks
+                  </div>*/}
                 </div>
-                <div className="hero__pendingnr">
-                  {this.state.pendingNr} pending tasks
-                </div>*/}
               </div>
-            </div>
-          </div>
-        </header>
-      )
-    }
+          }
+        </div>
+      </header>
+    )
   }
   
 }
