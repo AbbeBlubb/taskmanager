@@ -1,4 +1,7 @@
-import { GET_USERS, FETCH_USERS_START, FETCH_USERS_SUCCESSFUL, FETCH_USERS_ERROR } from "./actions"
+import {
+  FETCH_USERS_START,
+  FETCH_USERS_SUCCESSFUL,
+  FETCH_USERS_ERROR } from "./actions"
 
 
 const initialStateForUsers = {
@@ -6,18 +9,11 @@ const initialStateForUsers = {
   fetched: false,
   users: [],
   error: null,
-  usersAreDownloaded: false
 }
 
 const usersReducer = (state = initialStateForUsers, action) => {
   switch (action.type) {
     
-    case GET_USERS:
-      return {
-        users: action.json,
-        userInformationIsDownloaded: true
-      }
-      
     case FETCH_USERS_START:
       return {
         ...state,

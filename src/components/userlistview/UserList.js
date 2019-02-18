@@ -1,8 +1,13 @@
 import React from "react"
 import { connect } from "react-redux"
 import User from "./user/User"
-import { Loader } from "./Loader"
-import { USERS_URL, FETCH_USERS_START, FETCH_USERS_SUCCESSFUL, FETCH_USERS_ERROR } from "../../store/actions"
+import { Loader } from "../Loader"
+import { Error } from "../Error"
+import {
+  USERS_URL,
+  FETCH_USERS_START,
+  FETCH_USERS_SUCCESSFUL,
+  FETCH_USERS_ERROR } from "../../store/actions"
 
 class UserList extends React.Component {
 
@@ -21,9 +26,9 @@ class UserList extends React.Component {
   }
   
   render() {
-    if (!this.props.fetched) {
-      return <Loader />
-    } else {
+    if (this.props.error) { return <Error /> }
+    if (!this.props.fetched) { return <Loader /> }
+    else {
 
       const filteredArray = this.props.users.filter(element => (
         element.name.toLowerCase().indexOf(this.props.searchValue.toLowerCase()) !== -1 ||
@@ -51,8 +56,10 @@ class UserList extends React.Component {
 }
 
 const mapStateToProps = state => ({
+  fetching: state.usersReducer.fetching,
+  fetched: state.usersReducer.fetched,
   users: state.usersReducer.users,
-  fetched: state.usersReducer.fetched
+  error: state.usersReducer.error
 })
 
 export default connect(mapStateToProps)(UserList)

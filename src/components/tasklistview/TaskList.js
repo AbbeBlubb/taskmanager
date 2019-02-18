@@ -1,38 +1,38 @@
 import React from "react"
+import { connect } from "react-redux"
 import Task from "./Task"
+import {
+  TASKS_URL,
+  FETCH_TASKS_START,
+  FETCH_TASKS_SUCCESSFUL,
+  FETCH_TASKS_ERROR } from "../../store/actions"
+import { Error } from "../Error"
+import { Loader } from "../Loader"
 
-export default class TaskList extends React.Component {
-
-  constructor(props) {
-    super(props)
-    this.state = {
-      taskList: [],
-      informationIsDownloaded: false
-    }
-  }
-
+class TaskList extends React.Component {
+  
   componentDidMount() {
-    fetch("https://jsonplaceholder.typicode.com/todos")
-      .then(response => response.json())
-      .then(json => {
-        this.setState({
-          taskList: json,
-          informationIsDownloaded: true
+    this.props.dispatch(dispatch => {
+      dispatch({ type: FETCH_TASKS_START })
+      fetch(TASKS_URL)
+        .then(response => response.json())
+        .then(json => {
+          dispatch({ type: FETCH_TASKS_SUCCESSFUL, payload: json })
         })
-      })
+        .catch(error => {
+          dispatch({ type: FETCH_TASKS_ERROR, payload: error })
+        })
+    })
   }
 
   render() {
-    const filteredArray = this.state.taskList.filter(element =>
-      element.userId === Number(this.props.userId))
-
-    if (!this.state.informationIsDownloaded) {
-      return (
-        <div>
-          Loading...
-        </div>
-      )
-    } else {
+    if (this.props.error) { return <Error /> }
+    if (!this.props.fetched) { return <Loader /> }
+    else {
+      
+      const filteredArray = this.props.tasks.filter(element =>
+        element.userId === Number(this.props.userId))
+      
       return (
         <section className="tasklist">
           {filteredArray.map(task => (
@@ -46,3 +46,12 @@ export default class TaskList extends React.Component {
   }
 
 }
+
+const mapStateToProps = state => ({
+  fetching: state.tasksReducer.fetching,
+  fetched: state.tasksReducer.fetched,
+  tasks: state.tasksReducer.tasks,
+  error: state.tasksReducer.error
+})
+
+export default connect(mapStateToProps)(TaskList)
