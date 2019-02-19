@@ -17,7 +17,7 @@ export default class UserListView extends React.Component {
     this.setState({
       inputSearchUser: event.target.value
     })
-    console.log(event.target.value)
+    console.log('Search value: ', event.target.value)
   }
 
   render() {
