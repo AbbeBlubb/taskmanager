@@ -18,6 +18,11 @@
     font-size: 15px;
     font-weight: 200;
   }
+
+  &__search::placeholder {
+    font-size: 15px;
+    color: rgba(14, 72, 182, 0.5);
+  }
 }
 
 
