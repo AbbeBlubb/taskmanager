@@ -11,8 +11,10 @@ export default class User extends React.Component {
     return (
       <article className="userblock">
         <Link to={`/user/${this.props.id}`}>
-          <div className="userblock__inner flex-space-between">
-      
+          <div className="userblock__inner
+                          flex-space-between
+                          waves-effect
+                          waves-light-gray">
             <div className="flex">
               <UserNickname
                 nick={this.props.nick}
@@ -27,7 +29,6 @@ export default class User extends React.Component {
               <UserPendingTasks />
               <UserLinkToTasks />
             </div>
-    
           </div>
         </Link>
       </article>

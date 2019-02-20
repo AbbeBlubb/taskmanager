@@ -27,12 +27,15 @@ class TaskListView extends React.Component {
   render() {
     const userId = this.props.match.params.id
     
+    /* User information for Hero */
     const filteredUsers = this.props.users.find(element =>
       element.id === Number(userId))
     
+    /* User's tasks */
     const filteredTasks = this.props.tasks.filter(element =>
       element.userId === Number(userId))
   
+    /* User's not completed tasks */
     const pendingTasks = filteredTasks.filter(element =>
       !element.completed).length
     

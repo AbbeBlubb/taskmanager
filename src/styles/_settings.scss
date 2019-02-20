@@ -6,6 +6,12 @@ html, body, h1, h2, h3, h4, h5, h6, p {
   font-size: 100%;
 }
 
+/* Colors */
+
+.header {
+  background-color: #f0f0f0;
+}
+
 .filter {
   background-color: #fafafa;
 }
@@ -13,6 +19,16 @@ html, body, h1, h2, h3, h4, h5, h6, p {
 .filter__search {
   background-color: rgba(14, 72, 182, 0.10);
 }
+
+.hero__back {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.tasklist {
+  background-color: white;
+}
+
+/* General styling */
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -22,6 +38,13 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+/* Z-index */
+
+.header,
+.filter {
+  z-index: 10;
 }
 
 /*
@@ -41,28 +64,16 @@ Modifier = block__element--modifier / .block--modifier
   width: 30px;
 }
 
-.tasklist {
-  background-color: white;
-}
-
 /* Elements ****************************/
 
-.hero__loading {
-  background-color: rgba(255, 255, 255, 0.4);
-}
 
-.hero__back {
-  background-color: rgba(255, 255, 255, 0.5);
-}
 
 /* Modifiers ***************************/
 
-.header {
-  background-color: #f0f0f0;
-}
 
-.user:hover {
-  background-color: rgba(14, 72, 182, 0.10);
+
+.userblock__inner:hover {
+  background-color: rgba(14, 72, 182, 0.05);
 }
 
 .icon--small {

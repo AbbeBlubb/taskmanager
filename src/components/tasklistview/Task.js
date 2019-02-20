@@ -8,7 +8,8 @@ export default class Task extends React.Component {
   render() {
     return (
       <article className="task">
-        <div className="task__container">
+        <div className="task__container waves-effect
+                        waves-light-gray">
 
           <div className="task__stretch">
             <div className="task__color">

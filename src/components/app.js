@@ -2,6 +2,7 @@ import React from "react"
 import { HashRouter, Route } from "react-router-dom"
 import UserListView from "./userlistview/UserListView"
 import TaskListView from "./tasklistview/TaskListView"
+import '../assets/waves'
 
 export default class App extends React.Component {
   
