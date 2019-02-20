@@ -47,33 +47,19 @@ a {
   z-index: 10;
 }
 
-/*
-
-This stylesheet is written in BEM
+/* This stylesheet is written in BEM
 
 Block = .block
 Element = block__element
-Modifier = block__element--modifier / .block--modifier
-
-*/
+Modifier = block__element--modifier / .block--modifier */
 
 /* Blocks ******************************/
+/* Elements ****************************/
+/* Modifiers ***************************/
 
 .icon { /* className="icon" is used in several components, like a block. Therefore I put the .class here */
   height: 30px;
   width: 30px;
-}
-
-/* Elements ****************************/
-
-
-
-/* Modifiers ***************************/
-
-
-
-.userblock__inner:hover {
-  background-color: rgba(14, 72, 182, 0.05);
 }
 
 .icon--small {
@@ -88,6 +74,13 @@ Modifier = block__element--modifier / .block--modifier
 .icon--pending {
   background-color: rgba(0, 0, 255, 0.15);
 }
+
+/* Interaction */
+.userblock__inner:hover {
+  background-color: rgba(14, 72, 182, 0.05);
+}
+
+/* Helpers */
 
 .flex {
   display: flex;
