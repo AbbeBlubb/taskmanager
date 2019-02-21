@@ -20,19 +20,19 @@ self.__precacheManifest = [
     "url": "/taskmanager/static/js/runtime~main.6a0307bc.js"
   },
   {
-    "revision": "3266a995b7d390f59866",
-    "url": "/taskmanager/static/js/main.3266a995.chunk.js"
+    "revision": "dedd9315e4064e3a0cb7",
+    "url": "/taskmanager/static/js/main.dedd9315.chunk.js"
   },
   {
     "revision": "f0eea120ae92a52321ae",
     "url": "/taskmanager/static/js/1.f0eea120.chunk.js"
   },
   {
-    "revision": "3266a995b7d390f59866",
+    "revision": "dedd9315e4064e3a0cb7",
     "url": "/taskmanager/static/css/main.e6c98351.chunk.css"
   },
   {
-    "revision": "6fc1e05b06162df0ca421e97634d6b51",
+    "revision": "e1eee09be66a3c80521200b69e3739c9",
     "url": "/taskmanager/index.html"
   }
 ];
