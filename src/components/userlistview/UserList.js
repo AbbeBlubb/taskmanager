@@ -31,8 +31,6 @@ class UserList extends React.Component {
               email={user.email}
               city={user.address.city}
               pending={ this.props.tasksAreSorted ? this.props.sortedTasks[user.id].filter(element => !element.completed).length : '...'}
-
-
             />
           ))}
         </section>

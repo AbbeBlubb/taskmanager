@@ -55,6 +55,9 @@ const tasksReducer = (state = initialStateForTasks, action) => {
       action.payload.forEach(element => sortedTasks[element.userId].push(element))
       console.log('Populated sortedTasks: ', sortedTasks)
 
+      /* Because sortedTasks is an object (not an array), it's complex to control if the object is
+      populated and thus the app can crash if props needs the object. Easiest way is to signal
+      when the object is ready by having a flag (tasksAreSorted). */
       return {
         ...state,
         tasksAreSorted: true,
