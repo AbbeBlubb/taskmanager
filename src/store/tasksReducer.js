@@ -44,16 +44,16 @@ const tasksReducer = (state = initialStateForTasks, action) => {
       const sortedTasks = {}
 
       action.payload.forEach(element => userIdsRepeated.push(element.userId))
-      console.log('UserIdsRepeated: ', userIdsRepeated)
+      //console.log('UserIdsRepeated: ', userIdsRepeated)
 
       userIds = [...new Set(userIdsRepeated)]
-      console.log('UserIds: ', userIds)
+      //console.log('UserIds: ', userIds)
 
       userIds.forEach(element => sortedTasks[element] = [])
-      console.log('Initializing instances for sortedTasks: ', sortedTasks)
+      //console.log('Initializing instances for sortedTasks: ', sortedTasks)
 
       action.payload.forEach(element => sortedTasks[element.userId].push(element))
-      console.log('Populated sortedTasks: ', sortedTasks)
+      //console.log('Populated sortedTasks: ', sortedTasks)
 
       /* Because sortedTasks is an object (not an array), it's complex to control if the object is
       populated and thus the app can crash if props needs the object. Easiest way is to signal
