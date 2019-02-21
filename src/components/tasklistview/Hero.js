@@ -1,7 +1,5 @@
 import React from "react"
-import { Link } from "react-router-dom"
-import leftarrow from "../../assets/left-arrow.png"
-
+import { ArrowBack } from "./ArrowBack"
 
 export default class Hero extends React.Component {
 
@@ -26,11 +24,8 @@ export default class Hero extends React.Component {
         <div className="hero__container">
 
           {/* Link back to UserListView */}
-          <Link to="/">
-            <div className="hero__back waves-effect">
-              <img className="icon" src={leftarrow} alt="Back to the list with users" title="Back to the list with users" />
-            </div>
-          </Link>
+
+          <ArrowBack to='/' class='arrow-back-hero'/>
 
           {/* Box with user info */}
           <div className="hero__userinfo">

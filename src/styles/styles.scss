@@ -2,11 +2,13 @@
 
 @import './components/waves';
 
+@import './components/loader';
+@import './components/arrow-back';
+
 @import './components/filter';
 @import './components/header';
 @import './components/hero';
-@import './components/loader';
-@import './components/task';
+@import './components/task/task';
 @import './components/tasklist';
 @import './components/userlist';
 

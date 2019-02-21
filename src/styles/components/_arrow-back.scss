@@ -1,0 +1,14 @@
+.arrow-back {
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+
+  &__hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
