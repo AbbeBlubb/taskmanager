@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "react-router-dom"
 import leftarrow from "../../assets/left-arrow.png"
 
+
 export default class Hero extends React.Component {
 
   componentDidMount() {
@@ -23,14 +24,14 @@ export default class Hero extends React.Component {
     return (
       <header className="hero">
         <div className="hero__container">
-          
+
           {/* Link back to UserListView */}
           <Link to="/">
             <div className="hero__back waves-effect">
               <img className="icon" src={leftarrow} alt="Back to the list with users" title="Back to the list with users" />
             </div>
           </Link>
-          
+
           {/* Box with user info */}
           <div className="hero__userinfo">
             <div>
@@ -45,10 +46,10 @@ export default class Hero extends React.Component {
               </div>
             </div>
           </div>
-          
+
         </div>
       </header>
     )
   }
-  
+
 }
