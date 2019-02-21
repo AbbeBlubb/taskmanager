@@ -8,7 +8,14 @@ import {
   USERS_URL,
   FETCH_USERS_START,
   FETCH_USERS_ERROR,
-  FETCH_USERS_SUCCESSFUL } from "../store/actions"
+  FETCH_USERS_SUCCESSFUL,
+
+  TASKS_URL,
+  FETCH_TASKS_START,
+  FETCH_TASKS_ERROR,
+  FETCH_TASKS_SUCCESSFUL,
+
+  SORT_TASKS_BY_ID } from "../store/actions"
 
 
 class App extends React.Component {
@@ -23,6 +30,19 @@ class App extends React.Component {
         })
         .catch(error => {
           dispatch({ type: FETCH_USERS_ERROR, payload: error })
+        })
+    })
+
+    this.props.dispatch(dispatch => {
+      dispatch({ type: FETCH_TASKS_START })
+      fetch(TASKS_URL)
+        .then(response => response.json())
+        .then(json => {
+          dispatch({ type: FETCH_TASKS_SUCCESSFUL, payload: json })
+          dispatch({ type: SORT_TASKS_BY_ID, payload: json })
+        })
+        .catch(error => {
+          dispatch({ type: FETCH_TASKS_ERROR, payload: error })
         })
     })
   }

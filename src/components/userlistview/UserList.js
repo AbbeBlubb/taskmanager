@@ -12,11 +12,12 @@ class UserList extends React.Component {
     if (!this.props.fetched) { return <Loader /> }
     else {
 
+      /* Filter the user list received from the store, according to the search query */
       const filteredArray = this.props.users.filter(element => (
         element.name.toLowerCase().indexOf(this.props.searchValue.toLowerCase()) !== -1 ||
-          element.email.toLowerCase().indexOf(this.props.searchValue.toLowerCase()) !== -1 ||
-          element.address.city.toLowerCase().indexOf(this.props.searchValue.toLowerCase()) !== -1 ||
-          element.username.toLowerCase().indexOf(this.props.searchValue.toLowerCase()) !== -1
+        element.email.toLowerCase().indexOf(this.props.searchValue.toLowerCase()) !== -1 ||
+        element.address.city.toLowerCase().indexOf(this.props.searchValue.toLowerCase()) !== -1 ||
+        element.username.toLowerCase().indexOf(this.props.searchValue.toLowerCase()) !== -1
       ))
 
       return (
@@ -28,7 +29,11 @@ class UserList extends React.Component {
               nick={user.username}
               name={user.name}
               email={user.email}
-              city={user.address.city} />
+              city={user.address.city}
+              pending={ this.props.tasksAreSorted ? this.props.sortedTasks[user.id].filter(element => !element.completed).length : '...'}
+
+
+            />
           ))}
         </section>
       )
@@ -41,7 +46,10 @@ const mapStateToProps = state => ({
   fetching: state.usersReducer.fetching,
   fetched: state.usersReducer.fetched,
   users: state.usersReducer.users,
-  error: state.usersReducer.error
+  error: state.usersReducer.error,
+
+  tasksAreSorted: state.tasksReducer.tasksAreSorted,
+  sortedTasks: state.tasksReducer.sortedTasks
 })
 
 export default connect(mapStateToProps)(UserList)

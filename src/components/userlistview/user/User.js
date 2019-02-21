@@ -24,9 +24,9 @@ export default class User extends React.Component {
                 email={this.props.email}
                 city={this.props.city}/>
             </div>
-      
+
             <div className="flex">
-              <UserPendingTasks />
+              <UserPendingTasks pending={this.props.pending}/>
               <UserLinkToTasks />
             </div>
           </div>

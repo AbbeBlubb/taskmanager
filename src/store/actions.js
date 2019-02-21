@@ -7,6 +7,7 @@ export const FETCH_USERS_ERROR = 'FETCH_USERS_ERROR';
 export const FETCH_TASKS_START = 'FETCH_TASKS_START';
 export const FETCH_TASKS_SUCCESSFUL = 'FETCH_TASKS_SUCCESSFUL';
 export const FETCH_TASKS_ERROR = 'FETCH_TASKS_ERROR';
+export const SORT_TASKS_BY_ID = 'SORT_TASKS_BY_ID'
 
 /** Other constants */
 export const USERS_URL = "https://jsonplaceholder.typicode.com/users"

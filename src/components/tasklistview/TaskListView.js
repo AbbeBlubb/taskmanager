@@ -4,28 +4,9 @@ import { Loader } from "../Loader"
 import Hero from "./Hero"
 import TaskList from "./TaskList"
 import { connect } from "react-redux"
-import {
-  TASKS_URL,
-  FETCH_TASKS_START,
-  FETCH_TASKS_SUCCESSFUL,
-  FETCH_TASKS_ERROR } from "../../store/actions"
 
 
 class TaskListView extends React.Component {
-
-  componentDidMount() {
-    this.props.dispatch(dispatch => {
-      dispatch({ type: FETCH_TASKS_START })
-      fetch(TASKS_URL)
-        .then(response => response.json())
-        .then(json => {
-          dispatch({ type: FETCH_TASKS_SUCCESSFUL, payload: json })
-        })
-        .catch(error => {
-          dispatch({ type: FETCH_TASKS_ERROR, payload: error })
-        })
-    })
-  }
 
   render() {
 

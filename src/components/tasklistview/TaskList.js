@@ -1,7 +1,5 @@
 import React from "react"
 import Task from "./Task"
-import { Error } from "../Error"
-import { Loader } from "../Loader"
 
 
 export default class TaskList extends React.Component {
