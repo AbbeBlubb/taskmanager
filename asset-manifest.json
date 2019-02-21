@@ -1,17 +1,17 @@
 {
   "main.css": "/taskmanager/static/css/main.0bf9e95d.chunk.css",
-  "main.js": "/taskmanager/static/js/main.f401882c.chunk.js",
-  "main.js.map": "/taskmanager/static/js/main.f401882c.chunk.js.map",
-  "static/js/1.320e6de9.chunk.js": "/taskmanager/static/js/1.320e6de9.chunk.js",
-  "static/js/1.320e6de9.chunk.js.map": "/taskmanager/static/js/1.320e6de9.chunk.js.map",
+  "main.js": "/taskmanager/static/js/main.47b9f3e3.chunk.js",
+  "main.js.map": "/taskmanager/static/js/main.47b9f3e3.chunk.js.map",
+  "static/js/1.bd32b308.chunk.js": "/taskmanager/static/js/1.bd32b308.chunk.js",
+  "static/js/1.bd32b308.chunk.js.map": "/taskmanager/static/js/1.bd32b308.chunk.js.map",
   "runtime~main.js": "/taskmanager/static/js/runtime~main.6a0307bc.js",
   "runtime~main.js.map": "/taskmanager/static/js/runtime~main.6a0307bc.js.map",
   "static/media/user.png": "/taskmanager/static/media/user.9c5ad19e.png",
-  "static/media/right-arrow-1.png": "/taskmanager/static/media/right-arrow-1.0d7414cf.png",
   "static/media/clock.png": "/taskmanager/static/media/clock.b7890862.png",
   "static/media/styles.scss": "/taskmanager/static/media/background-board-book-733854.a254c645.jpg",
+  "static/media/right-arrow-1.png": "/taskmanager/static/media/right-arrow-1.0d7414cf.png",
   "static/css/main.0bf9e95d.chunk.css.map": "/taskmanager/static/css/main.0bf9e95d.chunk.css.map",
   "index.html": "/taskmanager/index.html",
-  "precache-manifest.19820c93f983a1116e59be19253f1d7a.js": "/taskmanager/precache-manifest.19820c93f983a1116e59be19253f1d7a.js",
+  "precache-manifest.fa99f0a0f24108ae6f8cb50a32927036.js": "/taskmanager/precache-manifest.fa99f0a0f24108ae6f8cb50a32927036.js",
   "service-worker.js": "/taskmanager/service-worker.js"
 }
