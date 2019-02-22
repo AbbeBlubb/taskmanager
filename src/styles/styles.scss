@@ -8,11 +8,15 @@
 @import './components/filter';
 @import './components/header';
 @import './components/hero';
-@import './components/task/task';
+
+@import 'components/task/task-block';
+@import 'components/task/task-block-color-area';
+@import 'components/task/task-block-text-area';
+@import 'components/task/task-block-status-area';
 @import './components/tasklist';
 @import './components/userlist';
 
-@import 'components/user/user';
+@import 'components/user/user-block';
 @import 'components/user/user-nickname';
 @import 'components/user/user-personal-details';
 @import 'components/user/user-pending-tasks';

@@ -7,6 +7,7 @@ export default class Filter extends React.Component {
     return (
       <section className="filter">
         <input
+          type='search'
           className="filter__search"
           autoFocus="{true}"
           placeholder="Search user"

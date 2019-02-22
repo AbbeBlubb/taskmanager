@@ -1,0 +1,13 @@
+.task-block-status-area {
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.task-block-status-area__status-text {
+  margin-top: 5px;
+  font-size: 10px;
+  color: #656565;
+}

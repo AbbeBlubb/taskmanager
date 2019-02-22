@@ -1,0 +1,24 @@
+.task-block-text-area {
+  display: flex;
+  align-items: center;
+
+  .task-block-text-area__text {
+    font-size: 13px;
+  }
+
+  .task-block-text-area__text:first-letter {
+    text-transform: capitalize;
+  }
+
+  @media (min-width: 400px) {
+    .task-block-text-area__text {
+      font-size: 15px;
+    }
+  }
+
+  @media (min-width: 600px) {
+    .task-block-text-area__text {
+      font-size: 17px;
+    }
+  }
+}

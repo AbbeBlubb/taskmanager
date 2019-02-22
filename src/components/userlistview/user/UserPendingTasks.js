@@ -4,7 +4,7 @@ export function UserPendingTasks(props) {
   return(
     <div
       className="user-pending-tasks"
-      title="Right now we can't display the amount of pending tasks in this section. Click on the user to see the number of pending tasks.">
+      title="Click to see details about the tasks">
       <div className="user-pending-tasks__pending-nr">
         {props.pending}
       </div>

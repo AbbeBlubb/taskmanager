@@ -1,6 +1,6 @@
 import React from "react"
 import { connect } from "react-redux"
-import User from "./user/User"
+import UserBlock from "./user/UserBlock"
 import { Loader } from "../Loader"
 import { Error } from "../Error"
 
@@ -23,7 +23,7 @@ class UserList extends React.Component {
       return (
         <section className="userlist">
           {filteredArray.map(user => (
-            <User
+            <UserBlock
               key={user.id}
               id={user.id}
               nick={user.username}

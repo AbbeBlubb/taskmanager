@@ -1,5 +1,5 @@
 import React from "react"
-import Task from "./Task"
+import TaskBlock from "./TaskBlock"
 
 
 export default class TaskList extends React.Component {
@@ -9,7 +9,7 @@ export default class TaskList extends React.Component {
     return (
       <section className="tasklist">
         {this.props.tasks.map(task => (
-          <Task
+          <TaskBlock
             key={task.id}
             task={task} />
         ))}

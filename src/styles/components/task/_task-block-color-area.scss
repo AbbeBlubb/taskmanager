@@ -1,0 +1,19 @@
+.task-block-color-area {
+  width: 20px;
+  margin-left: 5px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 400px) {
+  .task-block-color-area {
+    margin-right: 15px;
+  }
+}
+
+@media (min-width: 600px) {
+  .task-block-color-area {
+    margin-right: 20px;
+  }
+}

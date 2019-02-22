@@ -1,9 +1,12 @@
-.userblock {
+.user-block {
   max-width: 700px;
   margin: 0 auto;
-  padding: 0 2%;
 
-  .userblock__inner {
+  .user-block__centered {
+    padding: 0 12px;
+  }
+
+  .user-block__inner {
     -ms-word-break: break-word;
     word-break: break-word;
     -webkit-box-sizing: border-box;
