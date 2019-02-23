@@ -1,20 +1,19 @@
-import React from "react"
-import loupe from "../../assets/loupe.png"
+import React from 'react'
+
 
 export default class Filter extends React.Component {
 
   render() {
     return (
-      <section className="filter">
+      <section className='filter border-box'>
         <input
           type='search'
-          className="filter__search"
-          autoFocus="{true}"
-          placeholder="Search user"
+          className='filter__search border-box'
+          autoFocus={!( /Mobi/i.test(navigator.userAgent) || /Android/i.test(navigator.userAgent) )}
+          placeholder='Search user'
           onFocus={(event) => event.target.placeholder = ''}
           onBlur={(event) => event.target.placeholder = 'Search user'}
           onChange={event => this.props.handleChange(event)} />
-        <img className="icon" src={loupe} alt="Search user information: name, username, e-mail, or city" title="Search user information: name, username, e-mail, or city" />
       </section>
     )
   }

@@ -1,22 +1,27 @@
 .filter {
-  height: 35px;
+  height: 55px;
   font-size: 15px;
   border-bottom: 0.5px solid #0e48b6;
-  padding: 12px 15px;
+  padding: 0 20px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   position: fixed;
-  width: calc(100% - 30px);
+  width: 100%;
   top: 60.5px;
 
   &__search {
-    padding: 5px 10px;
+    padding: 5px 10px 5px 30px;
     border-style: none;
-    margin-right: 15px;
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     font-weight: 200;
+
+    background-image: url('../assets/loupe.png');
+    -webkit-background-size: contain;
+    background-size: 18px 18px;
+    background-position: 5px 5px;
+    background-repeat: no-repeat;
   }
 
   &__search::placeholder {
