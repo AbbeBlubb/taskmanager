@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "249c49d69d8d7e492405",
-    "url": "/taskmanager/static/css/main.c27a3f46.chunk.css"
+    "revision": "391af9bb9160c680bc7f",
+    "url": "/taskmanager/static/css/main.5a533f48.chunk.css"
   },
   {
-    "revision": "249c49d69d8d7e492405",
-    "url": "/taskmanager/static/js/main.249c49d6.chunk.js"
+    "revision": "391af9bb9160c680bc7f",
+    "url": "/taskmanager/static/js/main.391af9bb.chunk.js"
   },
   {
     "revision": "27c371c5a83964f81967",
@@ -32,7 +32,7 @@ self.__precacheManifest = [
     "url": "/taskmanager/static/media/background-board-book-733854.a254c645.jpg"
   },
   {
-    "revision": "f3384c056b3934c4068d4ab0b6c954fa",
+    "revision": "e8486f7f6e83789f8127c09584aa3f22",
     "url": "/taskmanager/index.html"
   }
 ];
