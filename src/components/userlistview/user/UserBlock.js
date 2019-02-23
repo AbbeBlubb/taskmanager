@@ -19,15 +19,15 @@ export default class UserBlock extends React.Component {
               <div className="flex">
                 <UserNickname
                   nick={this.props.nick}
-                  id={this.props.id}/>
+                  id={this.props.id} />
                 <UserPersonalDetails
                   name={this.props.name}
                   email={this.props.email}
-                  city={this.props.city}/>
+                  city={this.props.city} />
               </div>
   
               <div className="flex">
-                <UserPendingTasks pending={this.props.pending}/>
+                <UserPendingTasks pending={this.props.pending} />
                 <UserLinkToTasks />
               </div>
             </div>

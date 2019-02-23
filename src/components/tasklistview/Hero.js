@@ -2,7 +2,7 @@ import React from "react"
 import { ArrowBack } from "./ArrowBack"
 
 export default class Hero extends React.Component {
-
+/*
   componentDidMount() {
     window.addEventListener("scroll", this.parallax)
   }
@@ -15,8 +15,9 @@ export default class Hero extends React.Component {
     document.querySelector(".hero").style.top = `${window.pageYOffset * 0.4}px`
     /* console.log(`Y pixel: ${window.pageYOffset}\n` +
                    `Selected: ${document.querySelector(".hero")}\n` +
-                   `.hero style top: ${document.querySelector(".hero").style.top}`) */
+                   `.hero style top: ${document.querySelector(".hero").style.top}`)
   }
+  */
 
   render() {
     return (
@@ -37,7 +38,7 @@ export default class Hero extends React.Component {
                 {this.props.username}
               </div>
               <div className="hero__pendingnr">
-                {this.props.pendingNr} pending tasks
+                {this.props.pending} pending tasks
               </div>
             </div>
           </div>

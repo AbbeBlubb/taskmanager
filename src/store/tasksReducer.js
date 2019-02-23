@@ -1,8 +1,11 @@
 import {
   FETCH_TASKS_START,
   FETCH_TASKS_SUCCESSFUL,
-  FETCH_TASKS_ERROR, SORT_TASKS_BY_ID
+  FETCH_TASKS_ERROR,
+  SORT_TASKS_BY_ID,
+  TOGGLE_TODO
 } from "./actions"
+
 
 const initialStateForTasks = {
   fetching: false,
@@ -62,6 +65,27 @@ const tasksReducer = (state = initialStateForTasks, action) => {
         ...state,
         tasksAreSorted: true,
         sortedTasks
+      }
+      
+    case TOGGLE_TODO:
+      //console.log(action)
+      
+      const copySortedTasks = Object.assign({}, state.sortedTasks)
+      const usersTasks = [...copySortedTasks[action.payload.userId]]
+      //console.log(usersTasks)
+      
+      const updatedTasks = usersTasks.map(task =>
+        task.id === action.payload.taskId
+          ? { ...task, completed: !task.completed }
+          : task)
+      //console.log(updatedTasks)
+      
+      copySortedTasks[action.payload.userId] = updatedTasks
+      //console.log(state)
+      
+      return {
+        ...state,
+        sortedTasks: copySortedTasks
       }
 
     default: return state
