@@ -23,7 +23,7 @@ export default class Hero extends React.Component {
   render() {
     return (
       <header className="hero border-box">
-        
+        <div className='hero__content-wrap border-box'>
         <ArrowBack
           to='/'
           class='arrow-back-hero border-box' />
@@ -32,7 +32,7 @@ export default class Hero extends React.Component {
           name={this.props.name}
           username={this.props.username}
           pending={this.props.pending} />
-  
+        </div>
       </header>
     )
   }
