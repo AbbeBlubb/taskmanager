@@ -26,7 +26,7 @@ export default class Hero extends React.Component {
         
         <ArrowBack
           to='/'
-          class='arrow-back-hero' />
+          class='arrow-back-hero border-box' />
           
         <HeroUserInfoBox
           name={this.props.name}
