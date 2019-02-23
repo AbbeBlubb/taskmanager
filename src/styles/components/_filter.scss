@@ -11,17 +11,17 @@
   top: 60.5px;
 
   &__search {
+    width: 230px;
     padding: 5px 10px 5px 30px;
     border-style: none;
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     font-weight: 200;
-
     background-image: url('../assets/loupe.png');
+    background-repeat: no-repeat;
+    background-position: 5px 5px;
     -webkit-background-size: contain;
     background-size: 18px 18px;
-    background-position: 5px 5px;
-    background-repeat: no-repeat;
   }
 
   &__search::placeholder {
