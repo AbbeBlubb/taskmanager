@@ -22,19 +22,17 @@ export default class Hero extends React.Component {
 
   render() {
     return (
-      <header className="hero">
-        <div className="hero__container">
+      <header className="hero border-box">
+        
+        <ArrowBack
+          to='/'
+          class='arrow-back-hero' />
           
-          <ArrowBack
-            to='/'
-            class='arrow-back-hero' />
-            
-          <HeroUserInfoBox
-            name={this.props.name}
-            username={this.props.username}
-            pending={this.props.pending} />
+        <HeroUserInfoBox
+          name={this.props.name}
+          username={this.props.username}
+          pending={this.props.pending} />
   
-        </div>
       </header>
     )
   }
