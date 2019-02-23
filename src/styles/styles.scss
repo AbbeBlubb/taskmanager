@@ -1,3 +1,5 @@
+/* Url till bilder i CSS:en ska göras relativt till styles.scss, inte till det enskilda CSS-bladet */
+
 @import 'settings';
 
 @import './components/waves';
@@ -8,6 +10,7 @@
 @import './components/filter';
 @import './components/header';
 @import './components/hero';
+@import 'components/_hero-user-info-box.scss';
 
 @import 'components/task/task-block';
 @import 'components/task/task-block-color-area';

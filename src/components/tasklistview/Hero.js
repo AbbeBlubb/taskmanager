@@ -1,5 +1,6 @@
 import React from "react"
 import { ArrowBack } from "./ArrowBack"
+import { HeroUserInfoBox } from "./HeroUserInfoBox"
 
 export default class Hero extends React.Component {
 /*
@@ -23,26 +24,16 @@ export default class Hero extends React.Component {
     return (
       <header className="hero">
         <div className="hero__container">
-
-          {/* Link back to UserListView */}
-
-          <ArrowBack to='/' class='arrow-back-hero'/>
-
-          {/* Box with user info */}
-          <div className="hero__userinfo">
-            <div>
-              <h2 className="hero__name">
-                {this.props.name}
-              </h2>
-              <div className="hero__username">
-                {this.props.username}
-              </div>
-              <div className="hero__pendingnr">
-                {this.props.pending} pending tasks
-              </div>
-            </div>
-          </div>
-
+          
+          <ArrowBack
+            to='/'
+            class='arrow-back-hero' />
+            
+          <HeroUserInfoBox
+            name={this.props.name}
+            username={this.props.username}
+            pending={this.props.pending} />
+  
         </div>
       </header>
     )

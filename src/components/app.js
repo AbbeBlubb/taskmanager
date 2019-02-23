@@ -22,6 +22,7 @@ import {
 class App extends React.Component {
 
   componentDidMount() {
+    
     this.props.dispatch(dispatch => {
       dispatch({ type: FETCH_USERS_START })
       fetch(USERS_URL)
