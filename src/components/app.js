@@ -1,5 +1,6 @@
 import React from "react"
 import { HashRouter, Route } from "react-router-dom"
+import ScrollToTop from "./ScrollToTop"
 import UserListView from "./userlistview/UserListView"
 import TaskListView from "./tasklistview/TaskListView"
 import '../assets/waves'
@@ -50,10 +51,10 @@ class App extends React.Component {
   render() {
     return (
       <HashRouter>
-        <div className="main">
+        <ScrollToTop>
           <Route exact path="/" component={UserListView} />
           <Route exact path="/user/:id" component={TaskListView} />
-        </div>
+        </ScrollToTop>
       </HashRouter>
     )
   }
