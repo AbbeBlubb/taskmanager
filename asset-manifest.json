@@ -1,7 +1,7 @@
 {
   "main.css": "/taskmanager/static/css/main.f06cf70a.chunk.css",
-  "main.js": "/taskmanager/static/js/main.b5e37dae.chunk.js",
-  "main.js.map": "/taskmanager/static/js/main.b5e37dae.chunk.js.map",
+  "main.js": "/taskmanager/static/js/main.9743f518.chunk.js",
+  "main.js.map": "/taskmanager/static/js/main.9743f518.chunk.js.map",
   "static/js/1.27c371c5.chunk.js": "/taskmanager/static/js/1.27c371c5.chunk.js",
   "static/js/1.27c371c5.chunk.js.map": "/taskmanager/static/js/1.27c371c5.chunk.js.map",
   "runtime~main.js": "/taskmanager/static/js/runtime~main.6a0307bc.js",
@@ -12,6 +12,6 @@
   "static/media/styles.scss": "/taskmanager/static/media/background-board-book-733854.a254c645.jpg",
   "static/css/main.f06cf70a.chunk.css.map": "/taskmanager/static/css/main.f06cf70a.chunk.css.map",
   "index.html": "/taskmanager/index.html",
-  "precache-manifest.6021809d0becead9954fe7958e43c06a.js": "/taskmanager/precache-manifest.6021809d0becead9954fe7958e43c06a.js",
+  "precache-manifest.7a34d2b07257035d200ed09980e7d53f.js": "/taskmanager/precache-manifest.7a34d2b07257035d200ed09980e7d53f.js",
   "service-worker.js": "/taskmanager/service-worker.js"
 }
