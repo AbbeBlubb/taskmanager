@@ -22,19 +22,25 @@ import {
 class App extends React.Component {
 
   componentDidMount() {
-    
+    this.fireTheFetchUsersDispatches()
+  }
+  
+  fireTheFetchUsersDispatches = () => {
     this.props.dispatch(dispatch => {
       dispatch({ type: FETCH_USERS_START })
       fetch(USERS_URL)
         .then(response => response.json())
         .then(json => {
           dispatch({ type: FETCH_USERS_SUCCESSFUL, payload: json })
+          this.fireTheFetchTasksDispatches()
         })
         .catch(error => {
           dispatch({ type: FETCH_USERS_ERROR, payload: error })
         })
     })
-
+  }
+  
+  fireTheFetchTasksDispatches = () => {
     this.props.dispatch(dispatch => {
       dispatch({ type: FETCH_TASKS_START })
       fetch(TASKS_URL)
