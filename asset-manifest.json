@@ -1,7 +1,7 @@
 {
   "main.css": "/taskmanager/static/css/main.529e2ca5.chunk.css",
-  "main.js": "/taskmanager/static/js/main.64bc6807.chunk.js",
-  "main.js.map": "/taskmanager/static/js/main.64bc6807.chunk.js.map",
+  "main.js": "/taskmanager/static/js/main.53c01c74.chunk.js",
+  "main.js.map": "/taskmanager/static/js/main.53c01c74.chunk.js.map",
   "static/js/1.140e4b47.chunk.js": "/taskmanager/static/js/1.140e4b47.chunk.js",
   "static/js/1.140e4b47.chunk.js.map": "/taskmanager/static/js/1.140e4b47.chunk.js.map",
   "runtime~main.js": "/taskmanager/static/js/runtime~main.6a0307bc.js",
@@ -11,6 +11,6 @@
   "static/media/clock.png": "/taskmanager/static/media/clock.b7890862.png",
   "static/css/main.529e2ca5.chunk.css.map": "/taskmanager/static/css/main.529e2ca5.chunk.css.map",
   "index.html": "/taskmanager/index.html",
-  "precache-manifest.3e6f7fcaaf638cb5b75b6dd46c60d66c.js": "/taskmanager/precache-manifest.3e6f7fcaaf638cb5b75b6dd46c60d66c.js",
+  "precache-manifest.8caad882a80b1d367e348eb3429c8735.js": "/taskmanager/precache-manifest.8caad882a80b1d367e348eb3429c8735.js",
   "service-worker.js": "/taskmanager/service-worker.js"
 }

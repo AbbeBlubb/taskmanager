@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "64bc68075a1ad2c556c4",
+    "revision": "53c01c7432f75bf0b2fe",
     "url": "/taskmanager/static/css/main.529e2ca5.chunk.css"
   },
   {
-    "revision": "64bc68075a1ad2c556c4",
-    "url": "/taskmanager/static/js/main.64bc6807.chunk.js"
+    "revision": "53c01c7432f75bf0b2fe",
+    "url": "/taskmanager/static/js/main.53c01c74.chunk.js"
   },
   {
     "revision": "140e4b4736eb7241b701",
@@ -28,7 +28,7 @@ self.__precacheManifest = [
     "url": "/taskmanager/static/media/clock.b7890862.png"
   },
   {
-    "revision": "02f2449abe21eca8b8b1704123ffcaaf",
+    "revision": "6a5ceb3badbe35e0b54b5b6428de3405",
     "url": "/taskmanager/index.html"
   }
 ];
