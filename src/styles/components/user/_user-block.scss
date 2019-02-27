@@ -13,8 +13,12 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     min-height: 110px;
-    padding: 15px 3% 13px 3%;
+    padding: 15px 1% 13px 1%;
     border-bottom: 0.5px solid rgba(14, 72, 182, 0.30);
     margin: 0 auto;
+
+    @media (min-width: 400px) {
+      padding: 15px 3% 13px 3%;
+    }
   }
 }
