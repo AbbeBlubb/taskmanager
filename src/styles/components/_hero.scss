@@ -1,15 +1,15 @@
 .hero {
   position: relative;
   //height: 250px;
-  height: 40vh;
+  height: 200px;
   margin: 0 auto;
   //background: url("../assets/background-board-book-733854.jpg");
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center;
 
-  @media(min-height: 800px) {
-    //height: 300px;
+  @media(min-height: 500px) {
+    height: 40vh;
   }
 
   &__content-wrap {
