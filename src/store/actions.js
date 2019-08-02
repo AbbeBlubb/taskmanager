@@ -11,8 +11,8 @@ export const SORT_TASKS_BY_ID = 'SORT_TASKS_BY_ID';
 export const TOGGLE_TODO = 'TOGGLE_TODO';
 
 /** Other constants */
-export const USERS_URL = "https://jsonplaceholder.typicode.com/users";
-export const TASKS_URL = "https://jsonplaceholder.typicode.com/todos";
+export const USERS_URL = "https://taskmanager-backend-heroku.herokuapp.com/users";
+export const TASKS_URL = "https://taskmanager-backend-heroku.herokuapp.com/todos";
 
 /** Action Creators */
 /*
