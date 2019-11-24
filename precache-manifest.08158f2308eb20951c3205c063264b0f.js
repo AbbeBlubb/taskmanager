@@ -28,7 +28,7 @@ self.__precacheManifest = [
     "url": "/taskmanager/static/media/clock.b7890862.png"
   },
   {
-    "revision": "46f03f654bef007c4a9e90d798a23e78",
+    "revision": "1cf1526096dd8a742d37e6f55b39ffd9",
     "url": "/taskmanager/index.html"
   }
 ];
